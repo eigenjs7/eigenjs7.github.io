@@ -29,7 +29,7 @@ url: "https://blog.eigenjs.com" # the base hostname & protocol for your site, e.
 github_username: eigenjs7
 
 # Build settings
-theme: minima
+theme: jekyll-text-theme 
 plugins:
   - jekyll-feed
 
