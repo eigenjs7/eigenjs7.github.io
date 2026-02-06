@@ -24,6 +24,8 @@ $grey-color: #A3968D;          // Taupe
 $grey-color-light: #DFDACF;    // Khaki
 $grey-color-dark: #262626;     // Leather
 
+$code-bg-color: #F2EFE9;       // Clean Parchment (Lighter, for code blocks)
+
 // Layout
 $content-width: 750px;
 $on-palm: 600px;
@@ -93,23 +95,104 @@ a {
   }
 }
 
-// Code
+// =============================================================================
+// CODE STYLES - Unified
+// =============================================================================
+
+// Base settings for all code
 code, pre {
   font-family: $code-font;
-  background-color: $grey-color-light;
-  border: none;
+  font-size: 14px;      /* Your requested size */
+  color: $text-color;   /* Ensures text isn't too light */
 }
 
-pre {
-  border-radius: 4px;
-  padding: 1.25em 1.5em;
-}
-
+// 1. INLINE CODE (e.g. `print_hi`)
 code {
-  padding: 0.15em 0.4em;
+  background-color: $code-bg-color;     /* Uses the lighter parchment */
+  border: 1px solid $grey-color-light;  /* adds the subtle border */
   border-radius: 3px;
+  padding: 0.1em 0.3em;                 /* Tight padding for text flow */
+  vertical-align: middle;               /* Fixes alignment with text */
 }
 
+// 2. BLOCK CODE (The big box)
+pre {
+  background-color: $code-bg-color;     /* SAME parchment background */
+  border: 1px solid $grey-color-light;  /* SAME border color */
+  border-radius: 4px;
+  padding: 1.25em 1.5em;                /* More breathing room */
+  margin: 1.5rem 0;
+  overflow-x: auto;                     /* Scrollbar if needed */
+
+  /* IMPORTANT: Reset the 'code' tag inside the block to avoid double borders */
+  code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+  }
+}
+
+// 3. SYNTAX HIGHLIGHTING (Rouge wrapper)
+.highlight {
+  background-color: $code-bg-color !important;
+  border-radius: 4px;
+
+  pre {
+    background-color: $code-bg-color;
+    margin: 0;
+  }
+}
+
+// 4. WARM ACADEMIC SYNTAX COLORS (more visible, still warm)
+.highlight {
+  .k, .kd, .kn, .kp, .kr, .kt,  // Keywords (def, end, class, etc.)
+  .kc {                          // Keyword constant (true, false, nil)
+    color: #9C4221;              // Rich burnt orange
+    font-weight: 600;
+  }
+
+  .s, .s1, .s2, .sb, .sc, .sd,  // Strings
+  .se, .sh, .si, .sx, .sr {
+    color: #4A7C4E;              // Forest green (richer)
+  }
+
+  .c, .c1, .cm, .cp, .cs {      // Comments
+    color: #8B8178;              // Warm gray
+    font-style: italic;
+  }
+
+  .m, .mf, .mh, .mi, .mo {      // Numbers
+    color: #B5651D;              // Deep ochre
+  }
+
+  .nf, .nb {                     // Function names, built-ins
+    color: #7B4B3A;              // Rich mahogany
+    font-weight: 500;
+  }
+
+  .nc {                          // Class names
+    color: #5D4037;              // Dark chocolate
+    font-weight: 600;
+  }
+
+  .n, .na, .nv, .vi, .vg,       // Names, variables
+  .no, .nl, .nn, .ni {
+    color: $text-color;
+  }
+
+  .o, .ow, .p {                  // Operators, punctuation
+    color: $text-color;
+  }
+
+  .ss {                          // Symbols (Ruby :symbol)
+    color: #A0522D;              // Sienna
+  }
+
+  .err {                         // Errors
+    color: #C44536;              // Warm red
+  }
+}
 // Blockquotes
 blockquote {
   border-left: 2px solid $grey-color;
@@ -118,6 +201,11 @@ blockquote {
   margin: 2em 0;
   font-style: italic;
   color: $grey-color;
+}
+
+body {
+  overflow-x: hidden; /* Prevents horizontal scrollbars */
+  /* ... your existing body styles ... */
 }
 
 // =============================================================================
@@ -173,12 +261,32 @@ blockquote {
 }
 
 .site-nav {
+  /* 1. Layout Fundamentals */
   float: none;
+  display: block;
+  width: 100%;
+  text-align: center;
   line-height: 1;
   padding-top: 1rem;
-  border-top: 1px solid $grey-color-light;
-  display: inline-block;
+  
+  /* 2. Setup for the Full-Width Line */
+  position: relative; /* Creates an anchor point for the line */
+  border-top: none;   /* Remove the old, short border */
 
+  /* 3. The "Breakout" Line */
+  /* This pseudo-element creates a line that ignores the 750px limit */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;            /* Start at the center */
+    width: 100vw;         /* Force width to be 100% of the screen */
+    margin-left: -50vw;   /* Pull it back to the left by half the screen width to center it */
+    height: 1px;          /* Line thickness */
+    background-color: $grey-color-light; /* Matches your footer color */
+  }
+
+  /* 4. Link Styles (Unchanged) */
   .page-link {
     color: $grey-color;
     font-size: 0.9rem;
