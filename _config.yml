@@ -20,9 +20,7 @@
 
 title: Junseo Lee's Research Blog
 email: junseo.lee.1@stonybrook.edu
-description: >- # this means to ignore newlines until "baseurl:"
-    Exploring mathematics, computational science, and data analysis.
-    Research notes, tutorials, and insights on scientific computing.
+description: "Exploring mathematics, computational science, and engineering."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.eigenjs.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -32,6 +30,12 @@ github_username: eigenjs7
 theme: minima 
 plugins:
   - jekyll-feed
+
+# Conversion
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  math_engine_opts: {}
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,0 +1,62 @@
+// =============================================================================
+// CUSTOM VARIABLES FOR MINIMA THEME
+// These override minima's default variables
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+// Using Google Fonts: Merriweather (body) + Playfair Display (headings)
+// Import fonts in _includes/head.html or use @import here
+
+$base-font-family: "Merriweather", Georgia, "Times New Roman", serif;
+$heading-font-family: "Playfair Display", Georgia, serif;
+$code-font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", Menlo, Monaco, monospace;
+
+$base-font-size: 18px;
+$base-font-weight: 400;
+$base-line-height: 1.75;
+
+$small-font-size: $base-font-size * 0.875;
+
+// Spacing scale
+$spacing-unit: 32px;
+
+// -----------------------------------------------------------------------------
+// Color Palette - Warm Academic Theme
+// -----------------------------------------------------------------------------
+// Background tones
+$background-color: #faf8f5;        // Warm off-white / cream
+$content-background: #fffefa;      // Slightly lighter for content areas
+
+// Text colors
+$text-color: #3d3632;              // Warm dark brown (not pure black)
+$text-color-light: #6b6259;        // Muted brown for secondary text
+
+// Brand / accent colors
+$brand-color: #8b4513;             // Saddle brown - warm, academic accent
+$brand-color-light: lighten($brand-color, 25%);
+$brand-color-dark: darken($brand-color, 15%);
+
+// Link colors
+$link-color: #a0522d;              // Sienna - warm link color
+$link-hover-color: darken($link-color, 15%);
+$link-visited-color: #6b4423;
+
+// Code colors
+$code-background: #f5f2ed;         // Warm gray for code blocks
+$code-border: #e5e0d8;
+
+// Border colors
+$border-color: #e5e0d8;            // Warm light border
+$border-color-dark: #d0c9be;
+
+// -----------------------------------------------------------------------------
+// Layout
+// -----------------------------------------------------------------------------
+$content-width: 850px;
+
+// Breakpoints
+$on-palm: 600px;
+$on-laptop: 850px;
+$on-large: 1000px;

@@ -1,0 +1,569 @@
+---
+---
+
+// =============================================================================
+// CUSTOM VARIABLES - Must be defined BEFORE importing minima
+// =============================================================================
+
+// Typography
+$base-font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+$base-font-size: 17px;
+$base-font-weight: 400;
+$base-line-height: 1.75;
+$small-font-size: $base-font-size * 0.875;
+$spacing-unit: 32px;
+
+// Colors - Refined Neutral Palette
+$background-color: #faf8f5;    // Pearl
+$text-color: #4D403A;          // Cacao
+$title-color: #8B5A2B;         // Warm sienna
+$brand-color: #4D403A;         // Cacao (accent)
+$brand-color-light: #A3968D;   // Taupe
+$brand-color-dark: #262626;    // Leather
+$grey-color: #A3968D;          // Taupe
+$grey-color-light: #DFDACF;    // Khaki
+$grey-color-dark: #262626;     // Leather
+
+// Layout
+$content-width: 750px;
+$on-palm: 600px;
+$on-laptop: 800px;
+
+// Import minima theme
+@import "minima";
+
+// =============================================================================
+// CUSTOM STYLES - Elegant Personal Blog
+// =============================================================================
+
+$heading-font: "Source Serif 4", Georgia, serif;
+$title-font: "Cormorant Garamond", Georgia, serif;
+$code-font: "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
+
+
+// Body refinements
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  font-weight: 600;
+  color: $text-color;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.25;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+  border-bottom: none;
+  margin-top: 2.5rem; // same as your original
+  margin-bottom: 0.9rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.45rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.35;
+}
+
+
+
+// Links
+a {
+  color: $text-color;
+  text-decoration: underline;
+  text-decoration-color: $grey-color-light;
+  text-underline-offset: 3px;
+  transition: all 0.2s ease;
+
+  &:visited { color: $text-color; }
+  &:hover {
+    text-decoration-color: $text-color;
+  }
+}
+
+// Code
+code, pre {
+  font-family: $code-font;
+  background-color: $grey-color-light;
+  border: none;
+}
+
+pre {
+  border-radius: 4px;
+  padding: 1.25em 1.5em;
+}
+
+code {
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+// Blockquotes
+blockquote {
+  border-left: 2px solid $grey-color;
+  background: transparent;
+  padding: 0 0 0 1.5em;
+  margin: 2em 0;
+  font-style: italic;
+  color: $grey-color;
+}
+
+// =============================================================================
+// SITE HEADER - Elegant centered design
+// =============================================================================
+.site-header {
+  border-top: none;
+  border-bottom: none;
+  padding: 4rem 0 3rem;
+  text-align: center;
+  min-height: auto;
+
+  .wrapper {
+    max-width: $content-width;
+  }
+}
+
+.header-content {
+  margin-bottom: 1.5rem;
+  display: block;
+  clear: both;
+}
+
+.site-title {
+  font-family: $title-font;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 0.75rem 0;
+  display: block !important;
+  float: none !important;
+  width: 100%;
+
+  a {
+    color: $title-color;
+    text-decoration: none;
+
+    &:visited { color: $title-color; }
+    &:hover { color: $grey-color; }
+  }
+}
+
+.site-tagline {
+  font-size: 1rem;
+  color: $grey-color;
+  font-style: italic;
+  margin: 0 auto;
+  display: block;
+  clear: both;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.site-nav {
+  float: none;
+  line-height: 1;
+  padding-top: 1rem;
+  border-top: 1px solid $grey-color-light;
+  display: inline-block;
+
+  .page-link {
+    color: $grey-color;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $text-color;
+    }
+
+    &.active {
+      color: $text-color;
+      border-bottom-color: $text-color;
+    }
+  }
+}
+
+// =============================================================================
+// HOME PAGE
+// =============================================================================
+.home {
+  .post-list-heading {
+    font-family: $base-font-family;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $grey-color;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid $grey-color-light;
+  }
+}
+
+// Post list
+.post-list {
+  list-style: none;
+  margin-left: 0;
+
+  > li {
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    font-family: $heading-font;
+    font-size: 1.5rem;
+    margin: 0.25rem 0 0.5rem;
+    line-height: 1.3;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+
+      &:hover {
+        color: $grey-color;
+      }
+    }
+  }
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: $grey-color;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+// Post excerpt (if enabled)
+.post-list li > p {
+  color: $grey-color;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+// =============================================================================
+// POST PAGE
+// =============================================================================
+.post-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $grey-color-light;
+}
+
+.post-title,
+.page-content h1 {
+  font-family: $heading-font;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+
+  @media screen and (max-width: $on-palm) {
+    font-size: 1.35rem;
+  }
+}
+
+.post-meta {
+  font-style: italic;
+}
+
+.post-content {
+  h2 {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid $grey-color-light;
+  }
+
+  img {
+    border-radius: 2px;
+    box-shadow: none;
+    margin: 2rem auto;
+  }
+
+  table {
+    font-size: 0.95rem;
+
+    th {
+      background-color: transparent;
+      border-bottom: 2px solid $grey-color-light;
+    }
+    td {
+      border-bottom: 1px solid $grey-color-light;
+    }
+    tr:nth-child(even) {
+      background-color: transparent;
+    }
+  }
+
+  hr {
+    border: none;
+    text-align: center;
+    margin: 3rem 0;
+
+    &::before {
+      content: "· · ·";
+      color: $grey-color-light;
+      letter-spacing: 0.5em;
+    }
+  }
+}
+
+// =============================================================================
+// PAGE (About, etc.)
+// =============================================================================
+.page-content {
+  padding-top: 0;
+}
+
+// =============================================================================
+// FOOTER - Elegant minimal
+// =============================================================================
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
+  text-align: center;
+
+  .footer-author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .author-name {
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: $text-color;
+  }
+
+  .footer-separator {
+    color: $grey-color-light;
+    font-size: 0.8rem;
+  }
+
+  a {
+    color: $grey-color;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    color: $grey-color;
+    letter-spacing: 0.05em;
+    margin-top: 1.5rem;
+  }
+}
+
+// =============================================================================
+// RESPONSIVE
+// =============================================================================
+@media screen and (max-width: $on-palm) {
+  .site-header {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .site-title {
+    font-size: 1.75rem;
+  }
+
+  .site-tagline {
+    font-size: 0.9rem;
+  }
+
+  .site-nav .page-link {
+    margin: 0 0.5rem;
+  }
+
+  .post-title,
+  .page-content h1 {
+    font-size: 1.25rem;
+  }
+}
+
+// =============================================================================
+// HOME PAGE - Welcome/Intro
+// =============================================================================
+.home-intro {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  text-align: center;
+
+  .profile-photo {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: $grey-color;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration-color: $grey-color-light;
+
+    &:hover {
+      text-decoration-color: $text-color;
+    }
+  }
+}
+
+// =============================================================================
+// POSTS PAGE - Archive by year
+// =============================================================================
+.posts-page {
+  max-width: 540px;
+  margin: 0 auto;
+
+  .year-heading {
+    font-family: $base-font-family;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $grey-color;
+    margin: 2rem 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $grey-color-light;
+  }
+
+  .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.4rem 0;
+    }
+
+    .post-meta {
+      font-size: 0.8rem;
+      color: $grey-color;
+      min-width: 55px;
+      font-style: normal;
+    }
+
+    .post-link {
+      color: $text-color;
+      text-decoration: none;
+      font-size: 0.9rem;
+
+      &:hover {
+        color: $grey-color;
+      }
+    }
+
+    .post-categories {
+      margin-left: auto;
+
+      .category {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: $grey-color;
+        background: $grey-color-light;
+        padding: 0.2em 0.5em;
+        border-radius: 3px;
+        margin-left: 0.25rem;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// ABOUT PAGE
+// =============================================================================
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $grey-color-light;
+
+  .about-name {
+    font-family: $title-font;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $title-color;
+    margin: 0 0 1rem 0;
+    border-bottom: none;
+  }
+
+  .about-meta {
+    font-size: 0.95rem;
+    color: $grey-color;
+    margin: 0.25rem 0;
+    line-height: 1.5;
+  }
+}
+
+.about-bio {
+  max-width: 600px;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  strong {
+    color: $text-color;
+    font-weight: 500;
+  }
+}
+
+.page-content.centered {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+
+  .profile-photo {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    color: $grey-color;
+  }
+}
