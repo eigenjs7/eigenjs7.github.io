@@ -58,14 +58,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.25;
   margin-top: 1.8rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-bottom: none;
   margin-top: 2.5rem;
   margin-bottom: 0.9rem;
@@ -73,7 +73,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   margin-top: 1.6rem;
   margin-bottom: 0.8rem;
   line-height: 1.35;
@@ -231,7 +231,7 @@ body {
 
 .site-title {
   font-family: $title-font;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -285,9 +285,8 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 100vw;
-    margin-left: -50vw;
+    left: -9999px;
+    right: -9999px;
     height: 1px;
     background-color: $grey-color-light;
   }
@@ -345,7 +344,7 @@ body {
   .post-list-heading {
     font-family: $base-font-family;
     font-size: 0.85rem;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.15em;
     color: $grey-color;
     font-weight: 500;
@@ -405,14 +404,42 @@ body {
   border-bottom: 1px solid $grey-color-light;
 }
 
+.post-taxonomies {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  .category, .tag {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 0.7rem;
+    text-transform: none;
+    letter-spacing: 0.05em;
+    padding: 0.25em 0.6em;
+    border-radius: 3px;
+  }
+
+  .category {
+    background-color: $title-color;
+    color: $background-color;
+  }
+
+  .tag {
+    background-color: $grey-color-light;
+    color: $grey-color-dark;
+  }
+}
+
 .post-title {
   font-family: $base-font-family;  // IBM Plex Serif
-  font-size: 2.2rem;
+  font-size: 1.75rem;
+  font-weight: 500;
   line-height: 1.3;
   margin-bottom: 0.5rem;
 
   @media screen and (max-width: $on-palm) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -502,7 +529,7 @@ body {
     color: $grey-color;
     font-size: 0.9rem;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.05em;
 
     &:hover {
@@ -554,7 +581,7 @@ body {
   }
 
   .post-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -594,20 +621,27 @@ body {
 // =============================================================================
 // POSTS PAGE - Archive by year
 // =============================================================================
-.posts-page {
+.posts-page,
+.archive-page {
   max-width: 540px;
   margin: 0 auto;
 
-  .year-heading {
+  .year-heading,
+  .category-heading {
     font-family: $base-font-family;
     font-size: 0.8rem;
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.15em;
     color: $grey-color;
     margin: 2rem 0 0.75rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $grey-color-light;
+  }
+
+  .category-heading {
+    color: $title-color;
+    text-transform: capitalize;
   }
 
   .post-list {
@@ -616,41 +650,62 @@ body {
     padding: 0;
 
     li {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      padding: 0.4rem 0;
+      display: grid;
+      grid-template-columns: 85px 1fr;
+      gap: 0.5rem 1rem;
+      padding: 0.6rem 0;
+      align-items: start;
     }
 
     .post-meta {
       font-size: 0.8rem;
       color: $grey-color;
-      min-width: 55px;
       font-style: normal;
+    }
+
+    .post-entry {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
     }
 
     .post-link {
       color: $text-color;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 1.05rem;
+      font-weight: 500;
 
       &:hover {
         color: $grey-color;
       }
     }
 
-    .post-categories {
-      margin-left: auto;
+    .post-categories,
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
 
       .category {
-        font-size: 0.7rem;
-        text-transform: uppercase;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 0.65rem;
+        text-transform: none;
         letter-spacing: 0.05em;
-        color: $grey-color;
-        background: $grey-color-light;
         padding: 0.2em 0.5em;
         border-radius: 3px;
-        margin-left: 0.25rem;
+        background-color: $title-color;
+        color: $background-color;
+      }
+
+      .tag {
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 0.65rem;
+        text-transform: none;
+        letter-spacing: 0.05em;
+        padding: 0.2em 0.5em;
+        border-radius: 3px;
+        background-color: $grey-color-light;
+        color: $grey-color-dark;
       }
     }
   }

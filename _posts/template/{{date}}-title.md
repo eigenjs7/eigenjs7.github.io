@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Your Post Title
-date: 2026-02-06
+date: {{date: YYYY-MM-DD}}
 categories:
-  - Math
-  - Computation
+  - math
+  - computation
 tags:
   - pca
   - linear-algebra
@@ -15,8 +15,4 @@ author: Junseo Lee
 math: true
 published: true
 ---
-
-In this post, I will be explaining principal component analysis (PCA), a widely used technique for dimensionality reduction. 
-
-
 
