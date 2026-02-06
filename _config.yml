@@ -22,7 +22,7 @@ title: Junseo Lee's Research Blog
 email: junseo.lee.1@stonybrook.edu
 description: "Exploring mathematics, computational science, and engineering."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://blog.eigenjs.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.eigenjs.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: eigenjs7
 
