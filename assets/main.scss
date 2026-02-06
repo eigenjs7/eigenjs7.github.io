@@ -547,7 +547,7 @@ blockquote {
 // =============================================================================
 @media screen and (max-width: $on-palm) {
   .site-header {
-    padding: 2.5rem 1rem 2rem;
+    padding: 2rem 1rem 1.5rem;
   }
 
   .site-title {
@@ -555,10 +555,11 @@ blockquote {
   }
 
   .site-tagline {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
   }
 
-  // CRITICAL: Force navigation to be inline, kill the dropdown
+  // CRITICAL: Force navigation - use flexbox for clean wrapping
   .site-nav {
     padding-top: 0.75rem;
     position: relative !important;
@@ -571,7 +572,10 @@ blockquote {
     // Hide the hamburger menu completely
     input ~ .trigger,
     .trigger {
-      display: block !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 0.25rem 0.75rem !important;
       max-height: none !important;
       padding: 0 !important;
       background: transparent !important;
@@ -585,13 +589,12 @@ blockquote {
       display: none !important;
     }
 
-    // Tighter spacing to fit all 4 nav items on one line
     .page-link {
       display: inline-block !important;
-      margin: 0 0.4rem !important;
+      margin: 0 !important;
       font-size: 0.7rem;
       letter-spacing: 0.08em;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.4rem;
     }
   }
 
