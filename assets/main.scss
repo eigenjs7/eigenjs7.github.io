@@ -203,9 +203,14 @@ blockquote {
   color: $grey-color;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
-  overflow-x: hidden; /* Prevents horizontal scrollbars */
-  /* ... your existing body styles ... */
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 // =============================================================================
@@ -280,13 +285,14 @@ body {
   position: relative;
   border-top: none;
 
-  /* 3. The "Breakout" Line */
+  /* 3. The "Breakout" Line - spans full viewport width */
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -9999px;
-    right: -9999px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
     height: 1px;
     background-color: $grey-color-light;
   }
@@ -546,42 +552,149 @@ body {
 }
 
 // =============================================================================
-// RESPONSIVE
+// RESPONSIVE - Mobile fixes
 // =============================================================================
+
+// Fix wrapper overflow issues globally
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  max-width: calc(#{$content-width} + 30px);
+  overflow: visible;
+}
+
 @media screen and (max-width: $on-palm) {
+  // Ensure no horizontal overflow
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .site-header {
     padding: 2.5rem 0 2rem;
+    width: 100%;
+    overflow: visible;
+
+    .wrapper {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .header-content {
+    width: 100%;
+    text-align: center;
   }
 
   .site-title {
     font-size: 1.75rem;
+    width: 100%;
+    text-align: center;
   }
 
   .site-tagline {
     font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
   }
 
+  // CRITICAL: Force navigation to be inline, kill the dropdown
   .site-nav {
     padding-top: 0.75rem;
+    position: relative !important;
+    float: none !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 
-    .page-link {
-      margin: 0 0.5rem;
-      font-size: 0.8rem;
-      display: inline-block !important;
+    // Hide the hamburger menu completely
+    input ~ .trigger {
+      display: block !important;
+      max-height: none !important;
+      padding: 0 !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      position: static !important;
+      width: 100% !important;
+    }
+
+    label[for="nav-trigger"] {
+      display: none !important;
+    }
+
+    .menu-icon {
+      display: none !important;
     }
 
     .trigger {
       display: block !important;
+      max-height: none !important;
+      padding: 0 !important;
       background: transparent !important;
       border: none !important;
       box-shadow: none !important;
-      padding: 0 !important;
       position: static !important;
+      width: 100% !important;
+      text-align: center !important;
     }
+
+    .page-link {
+      display: inline-block !important;
+      margin: 0 0.5rem !important;
+      font-size: 0.75rem;
+      padding-bottom: 0.5rem;
+      line-height: 1 !important;
+    }
+  }
+
+  .post-header {
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .post-title {
     font-size: 1.4rem;
+  }
+
+  .post-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  // Fix the posts/archive page grid on mobile
+  .posts-page,
+  .archive-page {
+    padding: 0;
+    width: 100%;
+
+    .post-list li {
+      grid-template-columns: 75px 1fr;
+      gap: 0.3rem 0.75rem;
+    }
+  }
+
+  .page-content {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-content.centered {
+    padding: 0 20px;
   }
 }
 
