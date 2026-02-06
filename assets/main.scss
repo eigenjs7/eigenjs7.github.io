@@ -58,22 +58,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   line-height: 1.25;
   margin-top: 1.8rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   border-bottom: none;
-  margin-top: 2.5rem; // same as your original
+  margin-top: 2.5rem;
   margin-bottom: 0.9rem;
   line-height: 1.3;
 }
 
 h3 {
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   margin-top: 1.6rem;
   margin-bottom: 0.8rem;
   line-height: 1.35;
@@ -250,43 +250,71 @@ body {
 }
 
 .site-tagline {
-  font-size: 1rem;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
   color: $grey-color;
-  font-style: italic;
   margin: 0 auto;
   display: block;
   clear: both;
   line-height: 1.5;
-  white-space: nowrap;
+
+  @media screen and (max-width: $on-palm) {
+    white-space: normal;
+    padding: 0 1rem;
+  }
 }
 
 .site-nav {
   /* 1. Layout Fundamentals */
-  float: none;
-  display: block;
+  float: none !important;
+  display: block !important;
   width: 100%;
   text-align: center;
   line-height: 1;
   padding-top: 1rem;
-  
+  background: transparent !important;
+  border: none !important;
+
   /* 2. Setup for the Full-Width Line */
-  position: relative; /* Creates an anchor point for the line */
-  border-top: none;   /* Remove the old, short border */
+  position: relative;
+  border-top: none;
 
   /* 3. The "Breakout" Line */
-  /* This pseudo-element creates a line that ignores the 750px limit */
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;            /* Start at the center */
-    width: 100vw;         /* Force width to be 100% of the screen */
-    margin-left: -50vw;   /* Pull it back to the left by half the screen width to center it */
-    height: 1px;          /* Line thickness */
-    background-color: $grey-color-light; /* Matches your footer color */
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    height: 1px;
+    background-color: $grey-color-light;
   }
 
-  /* 4. Link Styles (Unchanged) */
+  /* Hide hamburger menu icon */
+  .menu-icon {
+    display: none !important;
+  }
+
+  /* Override minima's mobile trigger */
+  input[type="checkbox"],
+  label[for="nav-trigger"] {
+    display: none !important;
+  }
+
+  /* Always show nav links, never use dropdown */
+  .trigger {
+    display: block !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    position: static !important;
+    max-height: none !important;
+  }
+
+  /* 4. Link Styles */
   .page-link {
     color: $grey-color;
     font-size: 0.9rem;
@@ -297,6 +325,7 @@ body {
     padding-bottom: 0.5rem;
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease;
+    display: inline-block !important;
 
     &:hover {
       color: $text-color;
@@ -376,15 +405,14 @@ body {
   border-bottom: 1px solid $grey-color-light;
 }
 
-.post-title,
-.page-content h1 {
-  font-family: $heading-font;
-  font-size: 1.5rem;
+.post-title {
+  font-family: $base-font-family;  // IBM Plex Serif
+  font-size: 2.2rem;
   line-height: 1.3;
   margin-bottom: 0.5rem;
 
   @media screen and (max-width: $on-palm) {
-    font-size: 1.35rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -503,16 +531,30 @@ body {
   }
 
   .site-tagline {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
-  .site-nav .page-link {
-    margin: 0 0.5rem;
+  .site-nav {
+    padding-top: 0.75rem;
+
+    .page-link {
+      margin: 0 0.5rem;
+      font-size: 0.8rem;
+      display: inline-block !important;
+    }
+
+    .trigger {
+      display: block !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      position: static !important;
+    }
   }
 
-  .post-title,
-  .page-content h1 {
-    font-size: 1.25rem;
+  .post-title {
+    font-size: 1.6rem;
   }
 }
 
