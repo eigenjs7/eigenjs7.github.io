@@ -44,6 +44,10 @@ $code-font: "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
 
 
 // Body refinements
+html, body {
+  overflow-x: hidden;  // Clip the full-width line at viewport edge
+}
+
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -213,9 +217,11 @@ blockquote {
   padding: 4rem 0 3rem;
   text-align: center;
   min-height: auto;
+  overflow: visible;  // Allow horizontal line to extend
 
   .wrapper {
     max-width: $content-width;
+    overflow: visible;  // Allow horizontal line to extend
   }
 }
 
@@ -281,8 +287,7 @@ blockquote {
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: calc(-50vw + 50%);
     width: 100vw;
     height: 1px;
     background-color: $grey-color-light;
