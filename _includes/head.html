@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- feed_meta -%}
@@ -30,15 +30,23 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 
-  <!-- Open external links in new tab -->
+  <!-- Open external links in new tab + wrap tables for mobile scroll -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const links = document.querySelectorAll('a[href^="http"]');
-      const host = window.location.hostname;
+      var links = document.querySelectorAll('a[href^="http"]');
+      var host = window.location.hostname;
       links.forEach(function(link) {
         if (!link.hostname.includes(host)) {
           link.setAttribute('target', '_blank');
           link.setAttribute('rel', 'noopener noreferrer');
+        }
+      });
+      document.querySelectorAll('.post-content table').forEach(function(table) {
+        if (!table.parentElement.classList.contains('table-wrapper')) {
+          var wrapper = document.createElement('div');
+          wrapper.className = 'table-wrapper';
+          table.parentNode.insertBefore(wrapper, table);
+          wrapper.appendChild(table);
         }
       });
     });

@@ -44,10 +44,6 @@ $code-font: "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
 
 
 // Body refinements
-html, body {
-  overflow-x: hidden;  // Clip the full-width line at viewport edge
-}
-
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -287,8 +283,8 @@ blockquote {
     content: "";
     position: absolute;
     top: 0;
-    left: calc(-50vw + 50%);
-    width: 100vw;
+    left: -9999px;
+    right: -9999px;
     height: 1px;
     background-color: $grey-color-light;
   }
@@ -462,8 +458,15 @@ blockquote {
     margin: 2rem auto;
   }
 
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0;
+  }
+
   table {
     font-size: 0.95rem;
+    min-width: 400px;
 
     th {
       background-color: transparent;
@@ -565,7 +568,7 @@ blockquote {
     text-wrap: balance;  // Prevent orphaned words
   }
 
-  // CRITICAL: Force navigation - 2x2 grid for 4 items
+  // CRITICAL: Force navigation - flex wrap for all items
   .site-nav {
     padding-top: 0.75rem;
     position: relative !important;
@@ -575,13 +578,12 @@ blockquote {
     border: none !important;
     box-shadow: none !important;
 
-    // Hide the hamburger menu completely
     input ~ .trigger,
     .trigger {
-      display: grid !important;
-      grid-template-columns: repeat(2, auto) !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
       justify-content: center !important;
-      gap: 0.4rem 1.5rem !important;
+      gap: 0.5rem 1.25rem !important;
       max-height: none !important;
       padding: 0 !important;
       background: transparent !important;
@@ -598,9 +600,9 @@ blockquote {
     .page-link {
       display: inline-block !important;
       margin: 0 !important;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       letter-spacing: 0.08em;
-      padding-bottom: 0.4rem;
+      padding: 0.4rem 0;
       text-align: center;
     }
   }
@@ -622,6 +624,16 @@ blockquote {
   .page-content p,
   .home-intro p {
     text-wrap: balance;
+  }
+}
+
+// Extra-small screens (< 360px) - stack post date above title
+@media screen and (max-width: 360px) {
+  .posts-page,
+  .archive-page {
+    .post-list li {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
