@@ -213,11 +213,8 @@ blockquote {
   padding: 4rem 0 3rem;
   text-align: center;
   min-height: auto;
-  overflow: visible;  // Allow horizontal line to extend
-
   .wrapper {
     max-width: $content-width;
-    overflow: visible;  // Allow horizontal line to extend
   }
 }
 
@@ -274,20 +271,8 @@ blockquote {
   background: transparent !important;
   border: none !important;
 
-  /* 2. Setup for the Full-Width Line */
-  position: relative;
-  border-top: none;
-
-  /* 3. The "Breakout" Line - spans full viewport width */
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -9999px;
-    right: -9999px;
-    height: 1px;
-    background-color: $grey-color-light;
-  }
+  /* 2. Top border line */
+  border-top: 1px solid $grey-color-light;
 
   /* Hide hamburger menu icon */
   .menu-icon {
