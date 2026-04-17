@@ -561,10 +561,18 @@ blockquote {
   .site-nav {
     position: static !important;
     width: 100%;
-    text-align: center;
     background-color: transparent !important;
     border-radius: 0;
-    padding-top: 0.75rem;
+    padding: 0.75rem 0.5rem 0;
+
+    // Flex distribution so four uppercase items fit on one line
+    // at 320px+ viewports. Equal horizontal spacing between items,
+    // no per-item margins summing into overflow.
+    display: flex !important;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem;
 
     label[for="nav-trigger"],
     .menu-icon,
@@ -573,10 +581,12 @@ blockquote {
     }
 
     .page-link {
-      font-size: 0.85rem;      // was 0.75rem — better legibility on mobile
-      letter-spacing: 0.08em;
-      margin: 0 0.6rem;
-      padding: 0.75rem 0;      // was 0.4rem — ~44px touch target
+      font-size: 0.8rem;       // slight trim from 0.85 to guarantee fit at 320px
+      letter-spacing: 0.06em;
+      margin: 0;               // spacing now comes from flex gap + space-between
+      padding: 0.75rem 0;      // vertical-only → ~44px touch target preserved
+      white-space: nowrap;     // never let a single label wrap mid-word
+      flex: 0 0 auto;
     }
   }
 
