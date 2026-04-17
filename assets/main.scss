@@ -41,6 +41,7 @@ $on-laptop: 800px;
 
 $heading-font: "Source Serif 4", Georgia, serif;       // section heads, subhead
 $title-font: "Fraunces", Georgia, serif;               // display surfaces (titles)
+$sans-font: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;  // tagline
 $code-font: "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
 
 // Variable-font axis defaults — applied via font-variation-settings
@@ -261,11 +262,10 @@ blockquote {
 }
 
 .site-tagline {
-  font-family: $base-font-family;          // unified serif voice (was IBM Plex Sans)
-  font-variation-settings: "opsz" 14;
+  font-family: $sans-font;
   font-size: 0.95rem;
   font-weight: 400;
-  font-style: italic;                      // small typographic gesture for the subtitle role
+  font-style: normal;
   color: $grey-color;
   margin: 0 auto;
   display: block;
@@ -880,6 +880,194 @@ blockquote {
     &:hover {
       border-bottom-color: $title-color;
     }
+  }
+}
+
+// =============================================================================
+// CARD GRID — Services & Projects
+// =============================================================================
+// Restrained academic card. Whole card is one <a> for keyboard nav.
+// Image square is reserved (always rendered) so the grid stays uniform.
+// Glyph placeholder uses Source Serif at large size; swap for an <img> later.
+
+.services-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid $grey-color-light;
+  border-radius: 2px;
+  background: transparent;
+  text-decoration: none;
+  color: $text-color;
+  position: relative;
+  transition: border-color 0.2s ease;
+
+  // Override global <a> defaults inside the card
+  &:visited { color: $text-color; }
+  &:hover {
+    border-color: $title-color;        // sienna
+    text-decoration: none;
+
+    .card-arrow { color: $title-color; }
+  }
+}
+
+.card-image {
+  flex: 0 0 72px;
+  width: 72px;
+  height: 72px;
+  border: 1px solid $grey-color-light;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: $on-palm) {
+    flex-basis: 56px;
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.card-glyph {
+  font-family: $heading-font;
+  font-size: 2rem;
+  line-height: 1;
+  color: $brand-color-light;            // taupe — quiet, decorative
+  font-style: normal;
+
+  @media screen and (max-width: $on-palm) {
+    font-size: 1.5rem;
+  }
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-width: 0;                         // allow ellipsis / wrap inside flex item
+  padding-right: 1.25rem;               // breathing room before the arrow
+  position: relative;
+}
+
+.card-title {
+  font-family: $heading-font;
+  font-size: 1.333rem;
+  font-weight: 600;
+  color: $text-color;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.card-metadata {
+  font-family: $base-font-family;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: $brand-color-light;            // taupe
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.card-summary {
+  font-size: 0.95rem;
+  color: $text-color;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.card-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 1rem;
+  color: $grey-color;
+  transition: color 0.2s ease;
+}
+
+// =============================================================================
+// SERVICE DETAIL PAGE
+// =============================================================================
+.service-page {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+.service-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $grey-color-light;
+
+  .service-title {
+    font-family: $title-font;
+    font-variation-settings: "opsz" 72, "SOFT" 60, "wght" 500;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: $title-color;
+    margin: 0 0 0.5rem 0;
+
+    @media screen and (max-width: $on-palm) {
+      font-size: 1.65rem;
+    }
+  }
+
+  .service-metadata {
+    font-family: $base-font-family;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: $brand-color-light;
+    margin: 0 0 0.75rem 0;
+  }
+
+  .service-summary {
+    font-size: 1.05rem;
+    color: $text-color;
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+.service-cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.service-cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-family: $base-font-family;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: $background-color;
+  background: $title-color;
+  text-decoration: none;
+  border: 1px solid $title-color;
+  border-radius: 2px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:visited { color: $background-color; }
+  &:hover {
+    background: transparent;
+    color: $title-color;
+    text-decoration: none;
   }
 }
 

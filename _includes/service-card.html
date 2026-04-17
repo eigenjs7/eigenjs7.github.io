@@ -1,0 +1,20 @@
+{%- assign s = include.service -%}
+<a href="{{ s.url | relative_url }}" class="card">
+  <div class="card-image" aria-hidden="true">
+    {%- if s.image -%}
+      <img src="{{ s.image | relative_url }}" alt="">
+    {%- else -%}
+      <span class="card-glyph">{{ s.glyph | default: "·" }}</span>
+    {%- endif -%}
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{{ s.title | escape }}</h3>
+    {%- if s.metadata -%}
+      <p class="card-metadata">{{ s.metadata }}</p>
+    {%- endif -%}
+    {%- if s.summary -%}
+      <p class="card-summary">{{ s.summary }}</p>
+    {%- endif -%}
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+</a>

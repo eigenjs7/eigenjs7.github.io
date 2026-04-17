@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="service-page">
+  <header class="service-header">
+    <h1 class="service-title">{{ page.title | escape }}</h1>
+    {%- if page.metadata -%}
+      <p class="service-metadata">{{ page.metadata }}</p>
+    {%- endif -%}
+    {%- if page.summary -%}
+      <p class="service-summary">{{ page.summary }}</p>
+    {%- endif -%}
+  </header>
+
+  <div class="service-content">
+    {{ content }}
+  </div>
+
+  {%- if page.register_url -%}
+    <div class="service-cta">
+      <a href="{{ page.register_url }}" class="service-cta-button" rel="noopener">Register →</a>
+    </div>
+  {%- endif -%}
+</article>

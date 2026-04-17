@@ -8,15 +8,16 @@ permalink: /services/
 
 ## Tutoring
 
-### High School
-
-- AP Statistics
-- AP Calculus
-- Pre-Calculus
-
-**30,000 KRW per 1-hour session**
-
-[Book a session →](https://forms.gle/3EhBVeGgVV59tXUy7)
+{% assign sorted_services = site.services | sort: 'order' %}
+{% if sorted_services.size > 0 %}
+<div class="services-grid">
+  {% for service in sorted_services %}
+    {% include service-card.html service=service %}
+  {% endfor %}
+</div>
+{% else %}
+*Coming soon.*
+{% endif %}
 
 ## Consulting
 

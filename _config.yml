@@ -1,7 +1,7 @@
 # Site settings
 title: Junseo Lee's Research Blog
 email: junseo.lee.1@stonybrook.edu
-description: "Exploring mathematics, computational science, and engineering."
+description: "Exploring mathematics and computation"
 baseurl: ""                         # subpath, e.g. /blog
 url: "https://www.eigenjs.com"      # base hostname & protocol
 github_username: eigenjs7
@@ -28,6 +28,14 @@ kramdown:
   math_engine_opts: {}
   input: GFM
   syntax_highlighter: rouge
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /services/:path/
+  projects:
+    output: false
 
 # Files / folders Jekyll should ignore.
 exclude:
