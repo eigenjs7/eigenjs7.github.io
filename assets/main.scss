@@ -6,7 +6,7 @@
 // =============================================================================
 
 // Typography
-$base-font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+$base-font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
 $base-font-size: 17px;
 $base-font-weight: 400;
 $base-line-height: 1.75;
@@ -39,15 +39,22 @@ $on-laptop: 800px;
 // CUSTOM STYLES - Elegant Personal Blog
 // =============================================================================
 
-$heading-font: "Source Serif 4", Georgia, serif;
-$title-font: "Cormorant Garamond", Georgia, serif;
+$heading-font: "Source Serif 4", Georgia, serif;       // section heads, subhead
+$title-font: "Fraunces", Georgia, serif;               // display surfaces (titles)
 $code-font: "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
+
+// Variable-font axis defaults — applied via font-variation-settings
+// Source Serif 4 body cut: opsz=14 (text optical size, more readable at small sizes)
+// Fraunces display cut:    opsz=144, SOFT=80 (warm, softened, large display)
+// Fraunces subhead cut:    opsz=72, SOFT=60 (display character at smaller scale)
 
 
 // Body refinements
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  // Source Serif 4 text-optical-size cut — designed for body reading
+  font-variation-settings: "opsz" 14;
 }
 
 // Headings
@@ -58,26 +65,29 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
 }
 
+// Perfect-fourth modular scale (1.333×) per Tim Brown / Bringhurst.
+// h1 = 1.333^3, h2 = 1.333^2, h3 = 1.333^1, body = 1rem.
+// Bigger headings → slightly tighter line-height, more breathing room above.
 h1 {
-  font-size: 1.5rem;
-  line-height: 1.25;
-  margin-top: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2.369rem;
+  line-height: 1.15;
+  margin-top: 2.75rem;
+  margin-bottom: 1.25rem;
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.777rem;
   border-bottom: none;
   margin-top: 2.5rem;
-  margin-bottom: 0.9rem;
-  line-height: 1.3;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 h3 {
-  font-size: 1.15rem;
-  margin-top: 1.6rem;
-  margin-bottom: 0.8rem;
-  line-height: 1.35;
+  font-size: 1.333rem;
+  margin-top: 1.875rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
 }
 
 
@@ -229,10 +239,13 @@ blockquote {
 
 .site-title {
   font-family: $title-font;
-  font-size: 2.5rem;          // was 3rem — trim to reclaim the fold
-  font-weight: 500;
+  // Fraunces display cut — large, warm, soft terminals
+  font-variation-settings: "opsz" 144, "SOFT" 80, "wght" 400;
+  font-size: 3.75rem;         // sized to fit "Junseo Lee's Research Blog" on one line at 750px wrapper
+  font-weight: 400;           // weight handled by font-variation-settings
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.1;
+  text-wrap: balance;         // graceful fallback if any future title wraps
   margin: 0 0 0.75rem 0;
   display: block !important;
   float: none !important;
@@ -248,9 +261,11 @@ blockquote {
 }
 
 .site-tagline {
-  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.85rem;
+  font-family: $base-font-family;          // unified serif voice (was IBM Plex Sans)
+  font-variation-settings: "opsz" 14;
+  font-size: 0.95rem;
   font-weight: 400;
+  font-style: italic;                      // small typographic gesture for the subtitle role
   color: $grey-color;
   margin: 0 auto;
   display: block;
@@ -400,7 +415,7 @@ blockquote {
   flex-wrap: wrap;
 
   .category, .tag {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: $base-font-family;
     font-size: 0.7rem;
     text-transform: none;
     letter-spacing: 0.05em;
@@ -420,14 +435,16 @@ blockquote {
 }
 
 .post-title {
-  font-family: $base-font-family;  // IBM Plex Serif
-  font-size: 1.75rem;
+  font-family: $title-font;        // Fraunces — display surface for individual post
+  font-variation-settings: "opsz" 72, "SOFT" 60, "wght" 500;
+  font-size: 2rem;                 // was 1.75rem — bumped for new display type
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
 
   @media screen and (max-width: $on-palm) {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
 }
 
@@ -549,7 +566,8 @@ blockquote {
   }
 
   .site-title {
-    font-size: 1.75rem;
+    font-size: 2.75rem;       // was 1.75rem — scaled for new display type system
+    line-height: 1.1;
   }
 
   .site-tagline {
@@ -565,8 +583,8 @@ blockquote {
     border-radius: 0;
     padding: 0.75rem 0.5rem 0;
 
-    // Flex distribution so four uppercase items fit on one line
-    // at 320px+ viewports. Equal horizontal spacing between items,
+    // Flex distribution so five uppercase items fit on one line
+    // at 360px+ viewports. Equal horizontal spacing between items,
     // no per-item margins summing into overflow.
     display: flex !important;
     flex-wrap: nowrap;
@@ -581,8 +599,8 @@ blockquote {
     }
 
     .page-link {
-      font-size: 0.8rem;       // slight trim from 0.85 to guarantee fit at 320px
-      letter-spacing: 0.06em;
+      font-size: 0.7rem;       // dropped from 0.8 to fit 5 items at 360px
+      letter-spacing: 0.04em;  // tightened from 0.06 — small budget reclaim
       // !important needed to beat Minima's mobile .site-nav .page-link
       // which ships a margin-left on nav items inside its hamburger layout.
       // Diagnostic outline confirmed first item was inset ~20px.
@@ -595,6 +613,30 @@ blockquote {
 
   .post-title {
     font-size: 1.4rem;
+  }
+
+  // Compressed heading scale on mobile — major third (1.25×)
+  // instead of desktop's perfect fourth (1.333×). Body stays 1rem.
+  // Display sizes shrink to fit narrow viewports; hierarchy still distinct.
+  h1 {
+    font-size: 1.953rem;   // ~31px
+    line-height: 1.15;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.563rem;   // ~25px
+    line-height: 1.2;
+    margin-top: 2rem;
+    margin-bottom: 0.85rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;    // ~20px
+    line-height: 1.3;
+    margin-top: 1.5rem;
+    margin-bottom: 0.65rem;
   }
 
   // Fix the posts/archive page grid on mobile
@@ -727,7 +769,7 @@ blockquote {
       gap: 0.25rem;
 
       .category {
-        font-family: "IBM Plex Sans", sans-serif;
+        font-family: $base-font-family;
         font-size: 0.65rem;
         text-transform: none;
         letter-spacing: 0.05em;
@@ -738,7 +780,7 @@ blockquote {
       }
 
       .tag {
-        font-family: "IBM Plex Sans", sans-serif;
+        font-family: $base-font-family;
         font-size: 0.65rem;
         text-transform: none;
         letter-spacing: 0.05em;
@@ -762,8 +804,11 @@ blockquote {
 
   .about-name {
     font-family: $title-font;
-    font-size: 2rem;
+    font-variation-settings: "opsz" 72, "SOFT" 60, "wght" 400;
+    font-size: 2.5rem;                       // bumped for new display system
     font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     color: $title-color;
     margin: 0 0 1rem 0;
     border-bottom: none;
@@ -847,6 +892,7 @@ blockquote {
 
   .page-404-heading {
     font-family: $title-font;
+    font-variation-settings: "opsz" 144, "SOFT" 80, "wght" 400;
     font-size: 6rem;
     line-height: 1;
     letter-spacing: -0.03em;

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typography Preview — Step 1</title>
+
+<!-- Fraunces: variable, with opsz + wght + SOFT axes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&display=swap" rel="stylesheet">
+<!-- Source Serif 4: variable, with opsz + wght axes -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300..700&display=swap" rel="stylesheet">
+<!-- Newsreader: variable, with opsz + wght axes -->
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..700&display=swap" rel="stylesheet">
+<!-- Cormorant Garamond: static, multiple weights -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ===================================================================
+     Palette — pulled from your actual main.scss (lines 18–22)
+     =================================================================== */
+  :root {
+    --background:  #faf8f5;   /* Pearl */
+    --text:        #4D403A;   /* Cacao */
+    --title:       #8B5A2B;   /* Warm sienna */
+    --rule:        rgba(77, 64, 58, 0.15);
+    --muted:       #A3968D;   /* Taupe */
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Page-level meta strip */
+  .meta-bar {
+    background: #1a1a1a;
+    color: #f4f1ea;
+    padding: 0.75rem 2rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+  .meta-bar strong { color: #f4f1ea; }
+  .meta-bar code { background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 3px; }
+
+  /* Variant section wrapper */
+  .variant {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+
+  .variant + .variant {
+    border-top: 1px solid var(--rule);
+  }
+
+  .variant-label {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    margin: 0 0 3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ===================================================================
+     VARIANT A — Fraunces for everything
+     opsz axis carries the headline-vs-body distinction
+     =================================================================== */
+  .variant-a {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 14, "SOFT" 30, "wght" 400;
+  }
+  .variant-a .site-title {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 80, "wght" 400;
+    font-size: 4.75rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--title);
+    margin: 0 0 0.5rem;
+  }
+  .variant-a .tagline {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 14, "SOFT" 30, "wght" 400;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    color: var(--text);
+    opacity: 0.75;
+    margin: 0 0 3rem;
+  }
+  .variant-a .bio {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 14, "SOFT" 30, "wght" 400;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    margin: 0 0 3rem;
+  }
+  .variant-a .section-head {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 60, "SOFT" 50, "wght" 600;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--text);
+    margin: 2.5rem 0 1rem;
+  }
+  .variant-a .post-title {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 60, "SOFT" 60, "wght" 500;
+    font-size: 1.625rem;
+    line-height: 1.25;
+    color: var(--title);
+    margin: 0 0 0.4rem;
+  }
+  .variant-a .post-meta {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 14, "SOFT" 0, "wght" 400;
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin: 0 0 0.75rem;
+    font-style: italic;
+  }
+  .variant-a .post-excerpt {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 14, "SOFT" 30, "wght" 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ===================================================================
+     VARIANT B — Fraunces display + Source Serif 4 body
+     Two distinct families; warmer body face for long reading
+     =================================================================== */
+  .variant-b {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-variation-settings: "opsz" 14, "wght" 400;
+  }
+  .variant-b .site-title {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 80, "wght" 400;
+    font-size: 4.75rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--title);
+    margin: 0 0 0.5rem;
+  }
+  .variant-b .tagline {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-variation-settings: "opsz" 14, "wght" 400;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    color: var(--text);
+    opacity: 0.75;
+    margin: 0 0 3rem;
+  }
+  .variant-b .bio {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-variation-settings: "opsz" 14, "wght" 400;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    margin: 0 0 3rem;
+  }
+  .variant-b .section-head {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 60, "SOFT" 50, "wght" 600;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--text);
+    margin: 2.5rem 0 1rem;
+  }
+  .variant-b .post-title {
+    font-family: "Fraunces", Georgia, serif;
+    font-variation-settings: "opsz" 60, "SOFT" 60, "wght" 500;
+    font-size: 1.625rem;
+    line-height: 1.25;
+    color: var(--title);
+    margin: 0 0 0.4rem;
+  }
+  .variant-b .post-meta {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-variation-settings: "opsz" 14, "wght" 400;
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin: 0 0 0.75rem;
+    font-style: italic;
+  }
+  .variant-b .post-excerpt {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-variation-settings: "opsz" 14, "wght" 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Small inline marker showing what's loaded */
+  .font-info {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(139, 90, 43, 0.05);
+    border-left: 2px solid var(--title);
+    line-height: 1.5;
+  }
+
+  .post-list { padding: 0; margin: 0; list-style: none; }
+  .post-list li { margin-bottom: 2.5rem; }
+</style>
+</head>
+<body>
+
+<div class="meta-bar">
+  <strong>Typography Preview — Step 1</strong>
+  &nbsp;·&nbsp; Compare two type systems against your actual palette
+  (<code>#faf8f5</code> pearl / <code>#8B5A2B</code> sienna / <code>#4D403A</code> cacao).
+  Same content, same scale, same colors — only the typefaces differ.
+</div>
+
+<!-- =============================================================== -->
+<!-- VARIANT A: Fraunces only                                        -->
+<!-- =============================================================== -->
+<section class="variant variant-a">
+  <p class="variant-label">Variant A — Fraunces only (single family, opsz axis)</p>
+
+  <p class="font-info">
+    Display:&nbsp; Fraunces &nbsp;<code>opsz=144, SOFT=80, wght=400</code><br>
+    Body:&nbsp;&nbsp;&nbsp;&nbsp; Fraunces &nbsp;<code>opsz=14, SOFT=30, wght=400</code>
+  </p>
+
+  <h1 class="site-title">Junseo Lee's Research Blog</h1>
+  <p class="tagline">Exploring mathematics, computational science, and engineering.</p>
+
+  <p class="bio">
+    I write about mathematics, scientific computing, finance and pretty much anything
+    quantitative—exploring ideas at the intersection of theory and practice. Outside of
+    that, I enjoy diving into philosophical and theological texts and thinking about the
+    big questions of human life.
+  </p>
+
+  <h2 class="section-head">Recent writings</h2>
+
+  <ul class="post-list">
+    <li>
+      <h3 class="post-title">On the convergence of Newton's method</h3>
+      <p class="post-meta">March 14, 2026 · 12 min read</p>
+      <p class="post-excerpt">
+        The standard convergence proof assumes the initial guess lies within a
+        neighborhood where the Jacobian remains nonsingular. This essay examines
+        what happens when that assumption breaks down — and why the Kantorovich
+        theorem gives us tighter guarantees than most undergraduate texts let on.
+      </p>
+    </li>
+    <li>
+      <h3 class="post-title">A note on Itô's lemma and pathwise calculus</h3>
+      <p class="post-meta">February 28, 2026 · 8 min read</p>
+      <p class="post-excerpt">
+        Föllmer's pathwise approach to stochastic integration shows that Itô's
+        formula is, in a precise sense, a deterministic statement about quadratic
+        variation rather than a probabilistic one. The implications for finance
+        are subtle but real.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<!-- =============================================================== -->
+<!-- VARIANT B: Fraunces (display) + Source Serif 4 (body)           -->
+<!-- =============================================================== -->
+<section class="variant variant-b">
+  <p class="variant-label">Variant B — Fraunces display + Source Serif 4 body (matched pair)</p>
+
+  <p class="font-info">
+    Display:&nbsp; Fraunces &nbsp;<code>opsz=144, SOFT=80, wght=400</code><br>
+    Body:&nbsp;&nbsp;&nbsp;&nbsp; Source Serif 4 &nbsp;<code>opsz=14, wght=400</code>
+  </p>
+
+  <h1 class="site-title">Junseo Lee's Research Blog</h1>
+  <p class="tagline">Exploring mathematics, computational science, and engineering.</p>
+
+  <p class="bio">
+    I write about mathematics, scientific computing, finance and pretty much anything
+    quantitative—exploring ideas at the intersection of theory and practice. Outside of
+    that, I enjoy diving into philosophical and theological texts and thinking about the
+    big questions of human life.
+  </p>
+
+  <h2 class="section-head">Recent writings</h2>
+
+  <ul class="post-list">
+    <li>
+      <h3 class="post-title">On the convergence of Newton's method</h3>
+      <p class="post-meta">March 14, 2026 · 12 min read</p>
+      <p class="post-excerpt">
+        The standard convergence proof assumes the initial guess lies within a
+        neighborhood where the Jacobian remains nonsingular. This essay examines
+        what happens when that assumption breaks down — and why the Kantorovich
+        theorem gives us tighter guarantees than most undergraduate texts let on.
+      </p>
+    </li>
+    <li>
+      <h3 class="post-title">A note on Itô's lemma and pathwise calculus</h3>
+      <p class="post-meta">February 28, 2026 · 8 min read</p>
+      <p class="post-excerpt">
+        Föllmer's pathwise approach to stochastic integration shows that Itô's
+        formula is, in a precise sense, a deterministic statement about quadratic
+        variation rather than a probabilistic one. The implications for finance
+        are subtle but real.
+      </p>
+    </li>
+  </ul>
+</section>
+
+</body>
+</html>

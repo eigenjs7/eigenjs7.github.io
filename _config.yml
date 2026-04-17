@@ -5,6 +5,7 @@ description: "Exploring mathematics, computational science, and engineering."
 baseurl: ""                         # subpath, e.g. /blog
 url: "https://www.eigenjs.com"      # base hostname & protocol
 github_username: eigenjs7
+linkedin_username: pauljunseo
 author: Junseo Lee
 
 # Social / OG — image is used by jekyll-seo-tag for og:image and twitter:image.

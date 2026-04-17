@@ -14,10 +14,13 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
 
-  <!-- Google Fonts — only the families actually used in main.scss -->
+  <!-- Google Fonts — only the families actually used in main.scss
+       Fraunces      : display (variable: opsz, wght, SOFT, ital)
+       Source Serif 4: body + headings (variable: opsz, wght, ital)
+       JetBrains Mono: code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   {%- comment -%}
   Load MathJax only on pages that opt in via `math: true` front matter
