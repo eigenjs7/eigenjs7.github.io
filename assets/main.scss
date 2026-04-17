@@ -858,3 +858,14 @@ blockquote {
     margin-bottom: 0.75rem;
   }
 }
+
+// =============================================================================
+// TEMPORARY DIAGNOSTIC — mobile nav alignment
+// Revert in the next commit once we've identified the asymmetry source.
+// =============================================================================
+@media screen and (max-width: $on-palm) {
+  .site-header      { outline: 1px solid red    !important; }   // header block
+  .site-header .wrapper { outline: 1px solid orange !important; } // wrapper
+  .site-nav         { outline: 1px solid blue   !important; }   // nav flex container
+  .site-nav .page-link { outline: 1px solid green  !important; }  // each link box
+}
