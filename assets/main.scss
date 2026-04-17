@@ -14,17 +14,18 @@ $small-font-size: $base-font-size * 0.875;
 $spacing-unit: 32px;
 
 // Colors - Refined Neutral Palette
+// Contrast tuned for WCAG AA (≥ 4.5:1 for body text).
 $background-color: #faf8f5;    // Pearl
-$text-color: #4D403A;          // Cacao
-$title-color: #8B5A2B;         // Warm sienna
+$text-color: #4D403A;          // Cacao                  — 9.39:1 on pearl
+$title-color: #8B5A2B;         // Warm sienna            — 5.51:1 on pearl
 $brand-color: #4D403A;         // Cacao (accent)
-$brand-color-light: #A3968D;   // Taupe
+$brand-color-light: #A3968D;   // Taupe (decorative only)
 $brand-color-dark: #262626;    // Leather
-$grey-color: #A3968D;          // Taupe
-$grey-color-light: #DFDACF;    // Khaki
+$grey-color: #776D65;          // Darker taupe           — 4.76:1 on pearl (was #A3968D @ 2.71:1)
+$grey-color-light: #DFDACF;    // Khaki (borders only — not text)
 $grey-color-dark: #262626;     // Leather
 
-$code-bg-color: #F2EFE9;       // Clean Parchment (Lighter, for code blocks)
+$code-bg-color: #EDE5D4;       // Warm parchment — visibly distinct from pearl (was #F2EFE9)
 
 // Layout
 $content-width: 750px;
@@ -82,14 +83,16 @@ h3 {
 
 
 // Links
+// Default state uses a visible underline (was $grey-color-light = 1.31:1 — near-invisible).
+// Visited differs from default so readers can track what they've read on long archives.
 a {
   color: $text-color;
   text-decoration: underline;
-  text-decoration-color: $grey-color-light;
+  text-decoration-color: $grey-color;
   text-underline-offset: 3px;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 
-  &:visited { color: $text-color; }
+  &:visited { color: $grey-color; }
   &:hover {
     text-decoration-color: $text-color;
   }
@@ -154,11 +157,11 @@ pre {
 
   .s, .s1, .s2, .sb, .sc, .sd,  // Strings
   .se, .sh, .si, .sx, .sr {
-    color: #4A7C4E;              // Forest green (richer)
+    color: #356A39;              // Forest green — 5.12:1 on code-bg (was 3.91:1)
   }
 
   .c, .c1, .cm, .cp, .cs {      // Comments
-    color: #8B8178;              // Warm gray
+    color: #6F6358;              // Warm slate — 4.65:1 on code-bg (was 3.04:1)
     font-style: italic;
   }
 
@@ -210,7 +213,7 @@ blockquote {
 .site-header {
   border-top: none;
   border-bottom: none;
-  padding: 4rem 0 3rem;
+  padding: 2.5rem 0 2rem;   // was 4rem 0 3rem — reclaim the fold
   text-align: center;
   min-height: auto;
   .wrapper {
@@ -226,7 +229,7 @@ blockquote {
 
 .site-title {
   font-family: $title-font;
-  font-size: 3rem;
+  font-size: 2.5rem;          // was 3rem — trim to reclaim the fold
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -570,10 +573,10 @@ blockquote {
     }
 
     .page-link {
-      font-size: 0.75rem;
+      font-size: 0.85rem;      // was 0.75rem — better legibility on mobile
       letter-spacing: 0.08em;
       margin: 0 0.6rem;
-      padding: 0.4rem 0;
+      padding: 0.75rem 0;      // was 0.4rem — ~44px touch target
     }
   }
 
@@ -612,27 +615,28 @@ blockquote {
 // =============================================================================
 .home-intro {
   max-width: 600px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 3rem;
   text-align: center;
 
   .profile-photo {
+    display: block;
     width: 110px;
     height: 110px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 1.05rem;       // was 0.9rem — this is the hero paragraph
     line-height: 1.7;
-    color: $grey-color;
+    color: $text-color;       // was $grey-color — primary copy deserves primary color
     margin-bottom: 0.5rem;
   }
 
   a {
     color: $text-color;
-    text-decoration-color: $grey-color-light;
+    text-decoration-color: $grey-color;
 
     &:hover {
       text-decoration-color: $text-color;
@@ -648,21 +652,22 @@ blockquote {
   max-width: 540px;
   margin: 0 auto;
 
+  // Section anchors — larger than body so they function visually as headings
+  // (were 0.8rem / 0.85rem, smaller than body copy).
   .year-heading,
   .category-heading {
-    font-family: $base-font-family;
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-family: $heading-font;
+    font-size: 1.25rem;
+    font-weight: 600;
     text-transform: none;
-    letter-spacing: 0.15em;
-    color: $grey-color;
-    margin: 2rem 0 0.75rem;
+    letter-spacing: 0;
+    color: $title-color;
+    margin: 2.5rem 0 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $grey-color-light;
   }
 
   .category-heading {
-    color: $title-color;
     text-transform: capitalize;
   }
 
@@ -774,23 +779,72 @@ blockquote {
   }
 }
 
+// Center the wrapper's max-width, but not arbitrary paragraph content inside it.
+// Long-form page copy reads badly when each line starts at a different x-offset.
+// Center short intros explicitly via .home-intro, .about-header, or add .centered-text.
 .page-content.centered {
   max-width: 540px;
   margin: 0 auto;
-  text-align: center;
 
   .profile-photo {
+    display: block;
     width: 110px;
     height: 110px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
+  }
+
+  // Only the intro block is center-aligned.
+  .home-intro,
+  .about-header,
+  .centered-text {
+    text-align: center;
   }
 
   p {
-    font-size: 0.9rem;
-    line-height: 1.7;
-    margin-bottom: 0.5rem;
-    color: $grey-color;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+}
+
+// Home page "See all writings →" link under the recent list.
+.home .see-all {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+
+  a {
+    color: $title-color;
+    text-decoration: none;
+    border-bottom: 1px solid $grey-color-light;
+
+    &:hover {
+      border-bottom-color: $title-color;
+    }
+  }
+}
+
+// =============================================================================
+// 404 PAGE
+// =============================================================================
+.page-404 {
+  margin: 4rem auto;
+  max-width: 600px;
+
+  .page-404-heading {
+    font-family: $title-font;
+    font-size: 6rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: $title-color;
+    margin: 0 0 1.5rem;
+    border: none;
+    padding: 0;
+  }
+
+  p {
+    color: $text-color;
+    margin-bottom: 0.75rem;
   }
 }
