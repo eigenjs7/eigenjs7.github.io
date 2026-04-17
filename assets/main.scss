@@ -562,7 +562,9 @@ blockquote {
 // =============================================================================
 @media screen and (max-width: $on-palm) {
   .site-header {
-    padding: 2rem 1rem 1.5rem;
+    // Horizontal padding removed so nav items align with page content
+    // below. Wrapper's 16px is the single source of horizontal inset on mobile.
+    padding: 2rem 0 1.5rem;
   }
 
   .site-title {
@@ -581,7 +583,7 @@ blockquote {
     width: 100%;
     background-color: transparent !important;
     border-radius: 0;
-    padding: 0.75rem 0.5rem 0;
+    padding: 0.75rem 0 0;
 
     // Flex distribution so five uppercase items fit on one line
     // at 360px+ viewports. Equal horizontal spacing between items,
