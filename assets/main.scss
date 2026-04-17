@@ -583,8 +583,11 @@ blockquote {
     .page-link {
       font-size: 0.8rem;       // slight trim from 0.85 to guarantee fit at 320px
       letter-spacing: 0.06em;
-      margin: 0;               // spacing now comes from flex gap + space-between
-      padding: 0.75rem 0;      // vertical-only → ~44px touch target preserved
+      // !important needed to beat Minima's mobile .site-nav .page-link
+      // which ships a margin-left on nav items inside its hamburger layout.
+      // Diagnostic outline confirmed first item was inset ~20px.
+      margin: 0 !important;
+      padding: 0.75rem 0 !important;  // vertical-only → ~44px touch target
       white-space: nowrap;     // never let a single label wrap mid-word
       flex: 0 0 auto;
     }
@@ -857,15 +860,4 @@ blockquote {
     color: $text-color;
     margin-bottom: 0.75rem;
   }
-}
-
-// =============================================================================
-// TEMPORARY DIAGNOSTIC — mobile nav alignment
-// Revert in the next commit once we've identified the asymmetry source.
-// =============================================================================
-@media screen and (max-width: $on-palm) {
-  .site-header      { outline: 1px solid red    !important; }   // header block
-  .site-header .wrapper { outline: 1px solid orange !important; } // wrapper
-  .site-nav         { outline: 1px solid blue   !important; }   // nav flex container
-  .site-nav .page-link { outline: 1px solid green  !important; }  // each link box
 }
