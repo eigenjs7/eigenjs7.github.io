@@ -1018,6 +1018,17 @@ blockquote {
   }
 }
 
+// Project cards drop the glyph column entirely — text only, no left gutter.
+.projects-grid .card {
+  grid-template-columns: 1fr auto;
+}
+
+// Service-grid modifier: no glyph column (used by Consulting).
+.services-grid--no-glyph {
+  .card { grid-template-columns: 1fr auto; }
+  .card-glyph { display: none; }
+}
+
 .card-glyph {
   font-family: $title-font;             // Adobe Garamond Pro
   font-style: italic;

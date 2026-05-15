@@ -1,13 +1,6 @@
 {%- assign p = include.project -%}
 {%- assign href = p.external_url | default: p.url -%}
 <a href="{{ href }}" class="card" target="_blank" rel="noopener">
-  <span class="card-glyph" aria-hidden="true">
-    {%- if p.image -%}
-      <img src="{{ p.image | relative_url }}" alt="">
-    {%- else -%}
-      {{ p.glyph | default: "·" }}
-    {%- endif -%}
-  </span>
   <div class="card-body">
     <h2 class="card-title">{{ p.title | escape }}</h2>
     {%- if p.metadata -%}

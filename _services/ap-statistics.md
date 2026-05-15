@@ -1,5 +1,6 @@
 ---
 layout: service
+section: tutoring
 title: "AP Statistics"
 summary: "Foundations of inference, regression, and probability for the AP exam."
 metadata: "High School · AP · Test Prep"

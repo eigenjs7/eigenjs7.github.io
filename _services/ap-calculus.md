@@ -1,5 +1,6 @@
 ---
 layout: service
+section: tutoring
 title: "AP Calculus"
 summary: "Limits, derivatives, integrals, and series — AB and BC paths."
 metadata: "High School · AP · Test Prep"

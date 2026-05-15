@@ -159,7 +159,7 @@ Short bio paragraph.
 - `summary` — single sentence, no trailing period (matches existing services).
 - `metadata` — middot-separated tags (`·` is U+00B7), no trailing period.
 - `order` — numeric. Lower numbers sort first on the services page. Gaps are fine (use 10, 20, 30 for easier re-ordering later).
-- `glyph` — Unicode character used as placeholder in the card's left square. Existing glyphs: σ ∫ π λ ≫ ¶. Pick anything that fits the "restrained academic" voice. Avoid characters that render as iOS emoji (see Troubleshooting).
+- `glyph` — Unicode character used as placeholder in the card's left square. Existing glyphs: σ ∫ π. Pick anything that fits the "restrained academic" voice. Avoid characters that render as iOS emoji (see Troubleshooting).
 - `register_url` — any URL. For "by inquiry" items, use `mailto:ljunseo1007@gmail.com` or a form link.
 
 ### Add a project
