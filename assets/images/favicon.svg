@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <title>eigenjs favicon — λ with serif (Garamond cut)</title>
-  
-  <path fill="#262626" d="M 13 17 Q 22 14 30 17 Q 36 21 39 30 L 68 80 Q 71 86 75 87 Q 79 88 81 84 L 84 84 Q 81 92 73 92 Q 65 92 60 84 L 33 38 Q 31 33 28 30 Q 24 26 20 27 Q 16 27 14 30 L 11 30 Q 11 22 13 17 Z"></path>
-  
-  <path fill="#262626" d="M 41 46 L 47 46 L 24 86 Q 22 89 18 89 L 13 89 Q 11 89 12 87 Z"></path>
+  <path fill="#7E5028" d="M 13 17 Q 22 14 30 17 Q 36 21 39 30 L 68 80 Q 71 86 75 87 Q 79 88 81 84 L 84 84 Q 81 92 73 92 Q 65 92 60 84 L 33 38 Q 31 33 28 30 Q 24 26 20 27 Q 16 27 14 30 L 11 30 Q 11 22 13 17 Z"></path>
+  <path fill="#7E5028" d="M 41 46 L 47 46 L 24 86 Q 22 89 18 89 L 13 89 Q 11 89 12 87 Z"></path>
 </svg>

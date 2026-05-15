@@ -4,9 +4,7 @@ title: Services
 permalink: /services/
 ---
 
-# Services
-
-## Tutoring
+# Tutoring
 
 {% assign sorted_services = site.services | sort: 'order' %}
 {% if sorted_services.size > 0 %}
@@ -19,6 +17,6 @@ permalink: /services/
 *Coming soon.*
 {% endif %}
 
-## Consulting
+# Consulting
 
 *By inquiry — details coming soon.*

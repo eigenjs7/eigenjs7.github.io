@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-# Projects
+# Programs
 
 {% assign sorted_projects = site.projects | sort: 'order' %}
 {% if sorted_projects.size > 0 %}
