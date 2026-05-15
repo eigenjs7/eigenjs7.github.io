@@ -40,14 +40,14 @@ $on-laptop: 800px;
 // =============================================================================
 
 $heading-font: "Source Serif 4", Georgia, serif;       // section heads, subhead
-$title-font: "Fraunces", Georgia, serif;               // display surfaces (titles)
+$title-font: "adobe-garamond-pro", "EB Garamond", "Garamond Premier Pro", Garamond, Georgia, serif;  // display surfaces (titles) — Adobe Fonts
 $sans-font: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;  // tagline
 $code-font: "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
 
 // Variable-font axis defaults — applied via font-variation-settings
 // Source Serif 4 body cut: opsz=14 (text optical size, more readable at small sizes)
-// Fraunces display cut:    opsz=144, SOFT=80 (warm, softened, large display)
-// Fraunces subhead cut:    opsz=72, SOFT=60 (display character at smaller scale)
+// Adobe Garamond Pro is STATIC — no opsz / SOFT axes. Weights available: 400, 600, 700
+// (regular, semibold, bold) + italics. Display sizes rely on point size and weight only.
 
 
 // Body refinements
@@ -240,10 +240,9 @@ blockquote {
 
 .site-title {
   font-family: $title-font;
-  // Fraunces display cut — large, warm, soft terminals
-  font-variation-settings: "opsz" 144, "SOFT" 80, "wght" 400;
+  // Adobe Garamond Pro — static regular cut at display size
   font-size: 3.75rem;         // sized to fit "Junseo Lee's Research Blog" on one line at 750px wrapper
-  font-weight: 400;           // weight handled by font-variation-settings
+  font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.1;
   text-wrap: balance;         // graceful fallback if any future title wraps
@@ -435,10 +434,9 @@ blockquote {
 }
 
 .post-title {
-  font-family: $title-font;        // Fraunces — display surface for individual post
-  font-variation-settings: "opsz" 72, "SOFT" 60, "wght" 500;
+  font-family: $title-font;        // Adobe Garamond Pro — display surface for individual post
   font-size: 2rem;                 // was 1.75rem — bumped for new display type
-  font-weight: 500;
+  font-weight: 400;                // Adobe Garamond Pro ships 400/600/700; no 500
   line-height: 1.2;
   letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
@@ -805,8 +803,7 @@ blockquote {
   border-bottom: 1px solid $grey-color-light;
 
   .about-name {
-    font-family: $title-font;
-    font-variation-settings: "opsz" 72, "SOFT" 60, "wght" 400;
+    font-family: $title-font;                // Adobe Garamond Pro
     font-size: 2.5rem;                       // bumped for new display system
     font-weight: 400;
     line-height: 1.1;
@@ -1017,10 +1014,9 @@ blockquote {
   border-bottom: 1px solid $grey-color-light;
 
   .service-title {
-    font-family: $title-font;
-    font-variation-settings: "opsz" 72, "SOFT" 60, "wght" 500;
+    font-family: $title-font;                // Adobe Garamond Pro
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 400;                        // no 500 cut in Adobe Garamond Pro
     line-height: 1.2;
     letter-spacing: -0.01em;
     color: $title-color;
@@ -1081,9 +1077,9 @@ blockquote {
   max-width: 600px;
 
   .page-404-heading {
-    font-family: $title-font;
-    font-variation-settings: "opsz" 144, "SOFT" 80, "wght" 400;
+    font-family: $title-font;                // Adobe Garamond Pro
     font-size: 6rem;
+    font-weight: 400;
     line-height: 1;
     letter-spacing: -0.03em;
     color: $title-color;

@@ -44,7 +44,9 @@ exclude:
   - vendor/
   - node_modules/
   - AUDIT.md
+  - DESIGN_SYSTEM.md
   - README.md
+  - USER_GUIDE.md
   - _templates/
   - .obsidian/
   - .DS_Store
