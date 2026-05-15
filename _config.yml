@@ -16,6 +16,7 @@ twitter:
 
 # Build
 theme: minima
+permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
