@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>eigenjs favicon — λⱼ (eigenvalue indexed by j)</title>
+  
+  
+  <path d="M 16 17 Q 26 18 30 27 L 56 75" fill="none" stroke="#262626" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+  
+  <path d="M 36 36 L 14 75" fill="none" stroke="#262626" stroke-width="9" stroke-linecap="round"></path>
+  
+  <circle cx="73" cy="55" r="4.5" fill="#262626"></circle>
+  <path d="M 73 65 L 73 84 Q 73 90 67 90 Q 62 90 60 86" fill="none" stroke="#262626" stroke-width="6" stroke-linecap="round"></path>
+</svg>

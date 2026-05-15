@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>eigenjs favicon — [λ] (eigenvalue notation)</title>
+  
+  <path d="M 20 12 L 12 12 L 12 88 L 20 88" fill="none" stroke="#262626" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"></path>
+  
+  <path d="M 80 12 L 88 12 L 88 88 L 80 88" fill="none" stroke="#262626" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"></path>
+  
+  <path d="M 33 28 Q 41 29 44 36 L 62 75" fill="none" stroke="#262626" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M 49 44 L 35 75" fill="none" stroke="#262626" stroke-width="8" stroke-linecap="round"></path>
+</svg>
