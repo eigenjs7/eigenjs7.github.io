@@ -29,6 +29,10 @@ kramdown:
   math_engine_opts: {}
   input: GFM
   syntax_highlighter: rouge
+  # Append the text variation selector (U+FE0E) so iOS Safari renders the
+  # footnote back-link as a plain glyph, not the ↩️ emoji chip. Same trick
+  # the site uses for the external-link arrow (↗︎).
+  footnote_backlink: "&#8617;&#xFE0E;"
 
 # Collections
 collections:
