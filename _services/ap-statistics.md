@@ -6,8 +6,9 @@ summary: "A 20-session AP Statistics exam preparation program."
 metadata: "High School · AP · Test Prep"
 order: 1
 permalink: /services/ap-statistics/
-price: "30,000 KRW per 1-hour session"
+price: "70,000 KRW per 1.5-hour session"
 register_url: "https://forms.gle/3EhBVeGgVV59tXUy7"
+info_session_url: "https://calendar.app.google/KDqz53dvSkYNH1m18"
 glyph: "σ"
 instructor: "Junseo Lee"
 ---
@@ -70,4 +71,6 @@ Cancellation of a scheduled session must be reported at least 24 hours in advanc
 
 ## Pricing
 
-{{ page.price }}
+70,000 KRW per session. A standard session runs 1.5 hours and is inclusive of all out-of-session work — problem-set grading, written feedback, and individualized improvement reports.
+
+Time beyond the 1.5-hour block, when needed, is billed at 15,000 KRW per additional 30 minutes. Sessions are arranged on a recurring weekly schedule across the 20-session program. A short introductory call is available at no charge to discuss the student's goals, current level, and scheduling before any commitment.

@@ -17,9 +17,14 @@ layout: default
     {{ content }}
   </div>
 
-  {%- if page.register_url -%}
+  {%- if page.register_url or page.info_session_url -%}
     <div class="service-cta">
-      <a href="{{ page.register_url }}" class="service-cta-button" rel="noopener">Register →</a>
+      {%- if page.register_url -%}
+        <a href="{{ page.register_url }}" class="service-cta-button" rel="noopener">Register →</a>
+      {%- endif -%}
+      {%- if page.info_session_url -%}
+        <a href="{{ page.info_session_url }}" class="service-cta-button service-cta-button--secondary" rel="noopener">Book an info session →</a>
+      {%- endif -%}
     </div>
   {%- endif -%}
 </article>
