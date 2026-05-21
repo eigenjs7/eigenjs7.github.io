@@ -15,7 +15,14 @@ instructor: "Junseo Lee"
 
 ## Overview
 
-A 20-session program preparing students for the AP Statistics exam, aligned with the College Board's revised framework effective Fall 2026. Each unit pairs concept sessions with graded problem-solving and evaluation, and the program concludes with full-length timed mock exams and review.
+A 20-session program — roughly 10 weeks — preparing students for the AP Statistics exam, aligned with the College Board's revised framework effective Fall 2026. Each unit pairs concept sessions with graded problem-solving and evaluation, and the program concludes with full-length timed mock exams and review.
+
+## Instructor Profile
+
+- Applied Mathematics and Statistics major at Stony Brook University (rising junior)
+- **Relevant Teaching Experience**: Teaching Assistant for AMS 310: Survey of Probability and Statistics at Stony Brook University (Spring 2026)
+- **College statistics coursework**: AMS 310 (Survey of Probability and Statistics), AMS 394 (Statistical Laboratory), and AMS 315 (Data Analysis), with AMS 311 (Probability Theory) and AMS 317 (Introduction to Linear Regression Analysis) in Fall 2026
+- Scored a 5 on AP Statistics exam (2024)
 
 ## Learning Outcomes
 
@@ -58,23 +65,25 @@ The course covers all five units of the AP Statistics exam as outlined in the CE
   - *5 Steps to a 5: 500 AP Statistics Questions to Know by Test Day*
   - *The Princeton Review AP Statistics Premium Prep* (latest edition)
 
-## Instructor Profile
-
-- Applied Mathematics and Statistics major at Stony Brook University (rising junior)
-- **Relevant Teaching Experience**: Teaching Assistant for AMS 310: Survey of Probability and Statistics at Stony Brook University (Spring 2026)
-- **College statistics coursework**: AMS 310 (Survey of Probability and Statistics), AMS 394 (Statistical Laboratory), and AMS 315 (Data Analysis), with AMS 311 (Probability Theory) and AMS 317 (Introduction to Linear Regression Analysis) in Fall 2026
-- Scored a 5 on AP Statistics exam (2024)
-
-## Policies
-
-Cancellation of a scheduled session must be reported at least 24 hours in advance.
-
 ## Format
 
-Sessions are held online via Google Meet, or in person in Songdo or Gangnam. The format is confirmed during the introductory call and can be adjusted by session as needed.
+Sessions are held online via Google Meet, or in person in Songdo or Gangnam. A mixed arrangement also works; for example, one online and one in-person session each week. The format is confirmed during the introductory call and can be adjusted by session as needed.
 
 ## Pricing
 
-70,000 KRW per session. A standard session runs 1.5 hours and is inclusive of all out-of-session work — problem-set grading, written feedback, and individualized improvement reports.
+70,000 KRW per session. A standard session runs 1.5 hours and is inclusive of all out-of-session work, including problem-set grading, written feedback, and individualized improvement reports.
 
-Time beyond the 1.5-hour block, when needed, is billed at 15,000 KRW per additional 30 minutes. Sessions are arranged on a recurring weekly schedule across the 20-session program. A short introductory call is available at no charge to discuss the student's goals, current level, and scheduling before any commitment.
+Time beyond the 1.5-hour block, when needed, is billed at 15,000 KRW per additional 30 minutes. Tuition is billed monthly in advance at the start of each calendar month.
+
+## Policies
+
+- **Enrollment and payment**: The program runs on a monthly contract of two sessions per week. The monthly fee is due before the first session of each month.
+- **Refunds**: A refund is available only if requested before the first session of the month begins; once the month has begun, fees are non-refundable.
+- **Cancellations and no-shows**: Cancellation of a scheduled session by the student must be reported at least 24 hours in advance. Sessions cancelled with proper notice are rescheduled at no cost. Cancellations made less than 24 hours in advance are treated as no-shows and charged in full. A late arrival does not extend the session beyond its scheduled end time.
+- **Instructor-initiated changes**: If the instructor must cancel a session, notice is given at least 24 hours in advance and the session is rescheduled at no cost — no session is lost.
+- **Preparation**: Students complete all pre-session assignments before each session.
+- **Venue costs**: For in-person sessions, any venue or space costs (such as a study café) are covered by the student.
+
+## Getting Started
+
+A short introductory call is available at no charge to discuss the student's goals, current level, and scheduling before any commitment.
