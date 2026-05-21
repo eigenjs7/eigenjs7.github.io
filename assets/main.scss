@@ -1085,7 +1085,13 @@ blockquote {
 }
 
 .card-summary {
-  font-size: 0.95rem;
+  // Source Sans 3 — same sans as the site tagline. Establishes a consistent
+  // role for the sans family ("UI / supporting copy") and visually separates
+  // the card's three text rows: serif-bold title, serif-italic metadata,
+  // sans summary. Size dialed down from 0.95rem to compensate for Source
+  // Sans's higher x-height vs Source Serif at equal point size.
+  font-family: $sans-font;
+  font-size: 0.92rem;
   color: $text-color;
   margin: 0;
   line-height: 1.55;
