@@ -1148,11 +1148,25 @@ blockquote {
   }
 
   .service-metadata {
-    font-family: $base-font-family;
-    font-size: 0.9rem;
-    font-style: italic;
-    color: $brand-color-light;
+    // Chip row matching .card-metadata and .post-taxonomies. Centered
+    // because the surrounding .service-header is center-aligned; the chips
+    // need explicit justify-content since flex children ignore parent's
+    // text-align.
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
     margin: 0 0 0.75rem 0;
+
+    .tag {
+      font-family: $base-font-family;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      padding: 0.25em 0.6em;
+      border-radius: 3px;
+      background-color: $grey-color-light;
+      color: $grey-color-dark;
+    }
   }
 
   .service-summary {

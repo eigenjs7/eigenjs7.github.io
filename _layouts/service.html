@@ -6,7 +6,12 @@ layout: default
   <header class="service-header">
     <h1 class="service-title">{{ page.title | escape }}</h1>
     {%- if page.metadata -%}
-      <p class="service-metadata">{{ page.metadata }}</p>
+      <div class="service-metadata">
+        {%- assign meta_items = page.metadata | split: " · " -%}
+        {%- for item in meta_items -%}
+          <span class="tag">{{ item }}</span>
+        {%- endfor -%}
+      </div>
     {%- endif -%}
     {%- if page.summary -%}
       <p class="service-summary">{{ page.summary }}</p>
@@ -20,10 +25,10 @@ layout: default
   {%- if page.register_url or page.info_session_url -%}
     <div class="service-cta">
       {%- if page.register_url -%}
-        <a href="{{ page.register_url }}" class="service-cta-button" rel="noopener">Register →</a>
+        <a href="{{ page.register_url }}" class="service-cta-button" rel="noopener">{{ page.register_label | default: "Register" }} →</a>
       {%- endif -%}
       {%- if page.info_session_url -%}
-        <a href="{{ page.info_session_url }}" class="service-cta-button service-cta-button--secondary" rel="noopener">Book an info session →</a>
+        <a href="{{ page.info_session_url }}" class="service-cta-button service-cta-button--secondary" rel="noopener">{{ page.info_session_label | default: "Book an info session" }} →</a>
       {%- endif -%}
     </div>
   {%- endif -%}
