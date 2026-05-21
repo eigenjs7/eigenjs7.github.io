@@ -1075,13 +1075,27 @@ blockquote {
 }
 
 .card-metadata {
-  font-family: $base-font-family;
-  font-size: 0.78rem;                   // was 0.85rem
-  font-style: italic;
-  color: $grey-color;                   // was $brand-color-light (taupe) — fixes AA failure noted in DESIGN_SYSTEM.md §2
-  letter-spacing: 0.02em;
+  // Chip row mirroring the post header / archive taxonomies — each
+  // metadata fragment renders as a khaki tag pill. Same .tag styling as
+  // .post-taxonomies and .posts-page .post-tags, so the card row reads
+  // consistently with post chrome elsewhere on the site. Source data is
+  // still a " · "-separated string in front matter; the card include
+  // splits it into individual spans.
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
   margin: 0;
   line-height: 1.4;
+
+  .tag {
+    font-family: $base-font-family;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    padding: 0.25em 0.6em;
+    border-radius: 3px;
+    background-color: $grey-color-light;
+    color: $grey-color-dark;
+  }
 }
 
 .card-summary {

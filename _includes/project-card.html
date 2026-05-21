@@ -4,7 +4,12 @@
   <div class="card-body">
     <h2 class="card-title">{{ p.title | escape }}</h2>
     {%- if p.metadata -%}
-      <p class="card-metadata">{{ p.metadata }}</p>
+      <div class="card-metadata">
+        {%- assign meta_items = p.metadata | split: " · " -%}
+        {%- for item in meta_items -%}
+          <span class="tag">{{ item }}</span>
+        {%- endfor -%}
+      </div>
     {%- endif -%}
     {%- if p.summary -%}
       <p class="card-summary">{{ p.summary }}</p>
