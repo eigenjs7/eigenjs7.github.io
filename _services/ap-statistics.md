@@ -69,6 +69,10 @@ The course covers all five units of the AP Statistics exam as outlined in the CE
 
 Cancellation of a scheduled session must be reported at least 24 hours in advance.
 
+## Format
+
+Sessions are held online via Google Meet, or in person in Songdo or Gangnam. The format is confirmed during the introductory call and can be adjusted by session as needed.
+
 ## Pricing
 
 70,000 KRW per session. A standard session runs 1.5 hours and is inclusive of all out-of-session work — problem-set grading, written feedback, and individualized improvement reports.
