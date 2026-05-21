@@ -57,12 +57,12 @@ The course covers all five units of the AP Statistics exam as outlined in the CE
   - *5 Steps to a 5: 500 AP Statistics Questions to Know by Test Day*
   - *The Princeton Review AP Statistics Premium Prep* (latest edition)
 
-## Instructor
+## Instructor Profile
 
 - Applied Mathematics and Statistics major at Stony Brook University (rising junior)
-- Teaching Assistant for AMS 310: Survey of Probability and Statistics at Stony Brook University (Spring 2026)
+- **Relevant Teaching Experience**: Teaching Assistant for AMS 310: Survey of Probability and Statistics at Stony Brook University (Spring 2026)
 - **College statistics coursework**: AMS 310 (Survey of Probability and Statistics), AMS 394 (Statistical Laboratory), and AMS 315 (Data Analysis), with AMS 311 (Probability Theory) and AMS 317 (Introduction to Linear Regression Analysis) in Fall 2026
-- Scored a 5 on the AP Statistics exam (2024)
+- Scored a 5 on AP Statistics exam (2024)
 
 ## Policies
 
