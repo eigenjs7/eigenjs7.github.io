@@ -1,7 +1,7 @@
 # Site settings
 title: Junseo Lee's Research Blog
 email: junseo.lee.1@stonybrook.edu
-description: "Exploring mathematics and computation"
+description: "Exploring statistics, data science, and finance"
 baseurl: ""                         # subpath, e.g. /blog
 url: "https://www.eigenjs.com"      # base hostname & protocol
 github_username: eigenjs7
