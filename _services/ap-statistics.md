@@ -65,9 +65,19 @@ The course covers all five units of the AP Statistics exam as outlined in the CE
   - *5 Steps to a 5: 500 AP Statistics Questions to Know by Test Day*
   - *The Princeton Review AP Statistics Premium Prep* (latest edition)
 
-## Format
+## Format and Availability
 
 Sessions are held online via Google Meet, or in person in Songdo or Gangnam. A mixed arrangement also works; for example, one online and one in-person session each week. The format is confirmed during the introductory call and can be adjusted by session as needed.
+
+| Unit                                                             | Exam weight | Sessions |
+| ---------------------------------------------------------------- | ----------: | -------- |
+| 1. Exploring One-Variable Data and Collecting Data               |      20–30% | 1–4      |
+| 2. Probability, Random Variables, and Probability Distributions  |      15–25% | 5–8      |
+| 3. Inference for Categorical Data: Proportions                   |      15–25% | 9–12     |
+| 4. Inference for Quantitative Data: Means                        |      10–20% | 13–15    |
+| 5. Regression Analysis                                           |      10–20% | 16–17    |
+| Exam Review                                                      |           — | 18–20    |
+
 
 ## Pricing
 

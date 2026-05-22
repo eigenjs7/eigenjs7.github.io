@@ -13,13 +13,22 @@ instructor: "Junseo Lee"
 
 ## Overview
 
-The Computational Essay Writing Mentorship is a one-on-one mentorship program that guides a high school student from a first idea to a finished [computational essay](https://writings.stephenwolfram.com/2017/11/what-is-a-computational-essay/) in the [Wolfram Language](https://www.wolfram.com/language/), published to the Wolfram Community.
+The Computational Essay Writing Mentorship is a one-on-one mentorship program that guides a high school student from a first idea to a finished [computational essay](https://writings.stephenwolfram.com/2017/11/what-is-a-computational-essay/) in the [Wolfram Language](https://www.wolfram.com/language/), published to the Wolfram Community. Most high school students never produce original research. This mentorship ends in a published essay of their own.
 
-It is not a coding course. The computational essay is the medium, an intellectual story told through the collaboration of a human author and a computer, built from text, code, and computation in a single document. Working toward one real essay, the student develops several competencies at once: computational thinking, technical communication, and fluency in the Wolfram Language. The finished essay also serves as a portfolio piece.
+It is not a coding course. The computational essay is the medium: an intellectual story told through the collaboration of a human author and a computer, built from text, code, and computation in a single document. The topic is the student's own, motivated by a question they already care about, and can come from a broad range of fields, including data analysis, mathematics, and the natural sciences.
 
-The topic is the student's own, motivated by a question they already care about. The mentor provides guidance, technical support, and instructional scaffolding at every stage; the student does the thinking, the coding, and the writing.
+Working towards one real essay, the student develops three core competencies (computational thinking, technical communication, and fluency in the Wolfram Language) and comes away with a tangible portfolio piece. The mentor, who has guided over 17 essays from drafting to publication, provides guidance and feedback, technical support, and instructional scaffolding at every stage; the student does the thinking, the coding, and the writing.
 
 *Undergraduate students are welcome to join our faculty-advised [Computational Essay Workshops](https://wolframclub.notion.site/homepage) run through the Wolfram Computational Research Club at SUNY Korea.*
+
+## What a Computational Essay Looks Like
+A computational essay is easiest to understand by reading one.
+
+Excellent essays by high school students, from the Wolfram high school program, can be found here: [Computational Thinking Initiatives](https://www.computationinitiative.org/)
+
+And these are the mentor’s own [Wolfram Community Staff Picks](https://community.wolfram.com/web/ljunseo1007) on which the mentorship's guidance is modeled: 
+- [Loss landscape geometry across the double descent curve](https://community.wolfram.com/groups/-/m/t/3603794) 
+- [Impact of parameter perturbation on neural network performance](https://community.wolfram.com/groups/-/m/t/3217332)
 
 ## Mentor Profile
 
@@ -28,14 +37,13 @@ The topic is the student's own, motivated by a question they already care about.
 - Applied Mathematics and Statistics major at Stony Brook University
 - [Wolfram Student Ambassador](https://www.wolfram.com/) and founder and president of the [Wolfram Computational Research Club (WCRC)](https://wolframclub.notion.site/homepage) at SUNY Korea
 - Mentor at the [Wolfram High School Summer Research Program](https://education.wolfram.com/summer-research-high-school/) (Boston, 2026); alumnus of the same program (2024)
-- Multiple [Wolfram Community Staff Pick](https://community.wolfram.com/web/ljunseo1007) computational essays, on topics including neural-network loss-landscape geometry and the double-descent phenomenon
+- Multiple [Wolfram Community Staff Pick](https://community.wolfram.com/web/ljunseo1007) computational essays, on topics including deep learning and data science
 - Presented on computational essay writing at the [Korea Mathematica User Conference](https://h2safe.kr/dahanweb/KMUC2026/KMUC2026_main.html) hosted by the School of Quantum at Korea University
 - Has guided over [17 computational essays](https://wolframclub.notion.site/clubgallery#2e799f19acb880039501f8bb1c03aca2) from drafting to publication for WCRC members
 
 ## Mentorship Outcomes
 
 By the end of the mentorship, the student will have produced and published a complete computational essay, and built the competencies behind it:
-
 1. **Computational thinking**: formulate a question and frame it as a problem that can be explored computationally.
 2. **Wolfram Language fluency**: write functional, idiomatic Wolfram Language code, drawing on its built-in functions and curated data.
 3. **Technical communication**: explain your reasoning clearly in prose alongside working code.
@@ -44,8 +52,7 @@ By the end of the mentorship, the student will have produced and published a com
 
 ## Structure
 
-The mentorship is one-on-one and project-based. A single essay is built over the course of the mentorship, in five stages:
-
+The mentorship is one-on-one and project-based. A single essay is built over the course of the mentorship through five iterative stages. Note thattThe process is not linear; a student often returns to earlier stages as the essay develops, for instance going back to exploration when a draft exposes a gap.
 - **Scoping**: select a topic and define a question to explore.
 - **Exploration**: prototype the core computations and examine the results.
 - **Drafting**: combine text and code into a complete first draft.
@@ -53,6 +60,11 @@ The mentorship is one-on-one and project-based. A single essay is built over the
 - **Polishing**: finalize the essay and prepare it for publication.
 
 The number of sessions is set by the scope of the project and agreed at the initial consultation. Reading and annotating drafts, testing code, and returning written feedback between sessions are included.
+
+### A typical mentoring session
+- **Pre-session task**: Working from the previous feedback, the student develops the essay and submits the updated version for review.
+- **During session**: The student and mentor review the work, resolve technical and conceptual obstacles, decide on direction and method, and cover the Wolfram Language techniques the next step needs. They close by setting the goals for the work ahead.
+- **After session**: The mentor reviews the full essay (text, code, and computed results), tests and debugs the code, and returns a written feedback report of specific revisions and next steps, which sets the next pre-session task.
 
 ## Materials
 
@@ -64,9 +76,8 @@ The mentorship requires access to the Wolfram Language and a textbook.
 
 ## Pricing
 
-60,000 KRW per session. Each session is a 60-minute meeting together with the out-of-session work that supports it:
-
-- a full review of the current draft — text, code, and computed results;
+60,000 KRW per session. Each session is a 60-minute meeting together with the out-of-session work that supports it, including:
+- a full review of the current draft (text, code, and computed results);
 - testing and debugging of the Wolfram Notebook code;
 - a written feedback report with specific revisions and next steps.
 
