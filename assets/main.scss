@@ -1177,6 +1177,93 @@ blockquote {
   }
 }
 
+// =============================================================================
+// PROFILE CARD — Mentor / Instructor intro block
+// =============================================================================
+// Compact horizontal card used inside Instructor/Mentor Profile sections on
+// service pages. Circular photo + name in a single hairline-bordered row, sat
+// above the credentials list. Photo size, border weight, and color tokens
+// match the rest of the design system (khaki hairlines, Garamond display
+// type, cacao body color).
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.5rem;
+  border: 1px solid $grey-color-light;
+  border-radius: 4px;
+}
+
+// Anchor variant — when the include is given an `href`, the wrapper becomes
+// a clickable card. Subtle hover: same faint sienna tint used on the
+// services/projects card grid, plus a sienna border to signal interaction.
+a.profile-card {
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  &:visited { color: inherit; }
+  &:hover {
+    background: rgba(139, 90, 43, 0.04);
+    border-color: $title-color;
+    text-decoration: none;
+  }
+}
+
+.profile-card-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: block;
+}
+
+.profile-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.profile-card-name {
+  font-family: $title-font;        // Adobe Garamond Pro
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: $text-color;              // cacao — distinguishes from page-title sienna
+  margin: 0;
+}
+
+.profile-card-role {
+  // Source Sans 3 — same UI sans used for tagline and card summaries.
+  // Sits as a quiet subtitle under the Garamond name.
+  font-family: $sans-font;
+  font-size: 0.9rem;
+  color: $grey-color;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: $on-palm) {
+  .profile-card {
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+  }
+  .profile-card-photo {
+    width: 64px;
+    height: 64px;
+  }
+  .profile-card-name {
+    font-size: 1.25rem;
+  }
+  .profile-card-role {
+    font-size: 0.85rem;
+  }
+}
+
 .service-cta {
   margin-top: 3rem;
   // Single-column grid sized to the widest button's max-content. With every

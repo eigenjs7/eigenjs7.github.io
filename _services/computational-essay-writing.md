@@ -23,6 +23,8 @@ The topic is the student's own, motivated by a question they already care about.
 
 ## Mentor Profile
 
+{% include profile-card.html name="Junseo Lee" role="Program coordinator · Mentor" href="/" image="/assets/images/profile.jpg" %}
+
 - Applied Mathematics and Statistics major at Stony Brook University
 - [Wolfram Student Ambassador](https://www.wolfram.com/) and founder and president of the [Wolfram Computational Research Club (WCRC)](https://wolframclub.notion.site/homepage) at SUNY Korea
 - Mentor at the [Wolfram High School Summer Research Program](https://education.wolfram.com/summer-research-high-school/) (Boston, 2026); alumnus of the same program (2024)

@@ -1,0 +1,22 @@
+{%- comment -%}
+Profile card — photo + name in a horizontal hairline-bordered block.
+Used to introduce the instructor/mentor at the top of CV-style sections.
+
+Usage:
+  {% include profile-card.html name="Junseo Lee" image="/assets/images/profile.jpg" %}
+
+Args:
+  name  — display name (required)
+  image — site-relative path to the photo (required)
+  role  — optional role/affiliation shown beneath the name (e.g. "Mentor")
+  href  — optional link target; when set, the whole card becomes clickable
+  alt   — optional override for the image alt text; defaults to `name`
+
+Why the outer <div markdown="0">: kramdown treats <a> as inline and would
+parse the inner block-level children as markdown, leaking the closing </a>
+out as text. Wrapping in a block element with markdown="0" passes the
+entire structure through verbatim, regardless of whether the inner wrapper
+is <aside> (no href) or <a> (with href).
+{%- endcomment -%}
+{%- capture profile_card_inner -%}<img class="profile-card-photo" src="{{ include.image | relative_url }}" alt="{{ include.alt | default: include.name | escape }}"><div class="profile-card-info"><p class="profile-card-name">{{ include.name | escape }}</p>{%- if include.role -%}<p class="profile-card-role">{{ include.role | escape }}</p>{%- endif -%}</div>{%- endcapture -%}
+<div markdown="0">{%- if include.href -%}<a class="profile-card" href="{{ include.href | relative_url }}">{{ profile_card_inner }}</a>{%- else -%}<aside class="profile-card">{{ profile_card_inner }}</aside>{%- endif -%}</div>
