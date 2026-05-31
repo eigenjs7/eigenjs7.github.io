@@ -79,7 +79,7 @@ By the end of the mentorship, the student will have produced and published a com
 
 ## Structure
 
-The mentorship is one-on-one and project-based. A single essay is built over the course of the mentorship through five iterative stages. Note thattThe process is not linear; a student often returns to earlier stages as the essay develops, for instance going back to exploration when a draft exposes a gap.
+The mentorship is one-on-one and project-based. A single essay is built over the course of the mentorship through five iterative stages. Since the process of writing a computational essay is not linear, a student may return to earlier stages as the essay develops, for instance going back to exploration when a draft exposes a gap.
 - **Scoping**: select a topic and define a question to explore.
 - **Exploration**: prototype the core computations and examine the results.
 - **Drafting**: combine text and code into a complete first draft.
