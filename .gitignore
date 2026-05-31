@@ -6,5 +6,7 @@ vendor
 .DS_Store
 **/.DS_Store
 .obsidian/
+.claude/
+.trash/
 # Local-only backup of the pre-resize profile photo
 assets/images/profile-original.jpg
