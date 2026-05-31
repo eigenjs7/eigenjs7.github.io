@@ -39,6 +39,7 @@ And these are the mentor’s own [Wolfram Community Staff Picks](https://communi
 - Published multiple [Wolfram Community Staff Pick](https://community.wolfram.com/web/ljunseo1007) computational essays, on topics including deep learning and data science
 - Mentor at the [Wolfram High School Summer Research Program](https://education.wolfram.com/summer-research-high-school/) (Boston, 2026); alumnus of the same program (2024)
 - Representing Wolfram as a [Wolfram Student Ambassador](https://www.wolfram.com/)
+- [Level 2 Certificate in Applied Expertise in Computational Research](https://www.wolframcloud.com/obj/online-courses/certificates/level2-computational-research/a03904fc-0c67-4c90-9854-ec20e89e349a/2.html) from Wolfram
 - Founded and leads the [Wolfram Computational Research Club](https://wolframclub.notion.site/homepage) at SUNY Korea, and has guided over [15 computational essays](https://wolframclub.notion.site/clubgallery#2e799f19acb880039501f8bb1c03aca2) from drafting to publication
 
 ## Subject Advisors
