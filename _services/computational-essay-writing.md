@@ -103,7 +103,7 @@ The mentorship requires access to the Wolfram Language and a textbook.
 
 ## Pricing
 
-Pricing ranges from 60,000 to 120,000 KRW per session, depending on the nature and scope of the project. Each session is a 60-minute meeting together with the out-of-session work that supports it, including:
+80,000 KRW per session. Each session is a 60-minute meeting together with the out-of-session work that supports it, including:
 - a full review of the current draft (text, code, and computed results);
 - testing and debugging of the Wolfram Notebook code;
 - a written feedback report with specific revisions and next steps.
