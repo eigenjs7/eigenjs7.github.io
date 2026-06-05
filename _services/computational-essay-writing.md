@@ -30,6 +30,8 @@ And these are the mentor’s own [Wolfram Community Staff Picks](https://communi
 - [Loss landscape geometry across the double descent curve](https://community.wolfram.com/groups/-/m/t/3603794) 
 - [Impact of parameter perturbation on neural network performance](https://community.wolfram.com/groups/-/m/t/3217332)
 
+The computational essays that the mentor has guided can be found [here](https://wolframclub.notion.site/clubgallery).
+
 ## Mentor Profile
 
 {% include profile-card.html name="Junseo Lee" role="Mentor · Subject Advisor in Data Science" href="/" image="/assets/images/profile.jpg" %}
