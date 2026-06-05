@@ -36,11 +36,12 @@ And these are the mentor’s own [Wolfram Community Staff Picks](https://communi
 
 - Applied Mathematics and Statistics major at Stony Brook University
 - Academic interests in statistics, data science, and quantitative finance
+- Advises on data analysis and data mining
 - Published multiple [Wolfram Community Staff Pick](https://community.wolfram.com/web/ljunseo1007) computational essays, on topics including deep learning and data science
 - Mentor at the [Wolfram High School Summer Research Program](https://education.wolfram.com/summer-research-high-school/) (Boston, 2026); alumnus of the same program (2024)
 - Representing Wolfram as a [Wolfram Student Ambassador](https://www.wolfram.com/)
 - [Level 2 Certificate in Applied Expertise in Computational Research](https://www.wolframcloud.com/obj/online-courses/certificates/level2-computational-research/a03904fc-0c67-4c90-9854-ec20e89e349a/2.html) from Wolfram
-- Founded and leads the [Wolfram Computational Research Club](https://wolframclub.notion.site/homepage) at SUNY Korea, and has guided over [15 computational essays](https://wolframclub.notion.site/clubgallery#2e799f19acb880039501f8bb1c03aca2) from drafting to publication
+- Founded and leads the [Wolfram Computational Research Club](https://wolframclub.notion.site/homepage) at SUNY Korea, and has guided over [11 computational essays](https://wolframclub.notion.site/clubgallery#2e799f19acb880039501f8bb1c03aca2) from drafting to publication
 
 ## Subject Advisors
 
@@ -54,6 +55,8 @@ Where it helps, they also point students to the domain-specific Wolfram Language
 
 {% include profile-card.html name="Eugene Hwang" role="Subject Advisor in Computer Science and Machine Learning" image="/assets/images/eugene-hwang.jpg" %}
 
+Eugene is a sophomore at Carnegie Mellon University studying Information Systems and Artificial Intelligence. He first started programming through competitive programming in middle school. Now he mostly focuses on full-stack development and natural language processing research, although he still does programming competitions on the side.
+
 - Information Systems and Artificial Intelligence major at Carnegie Mellon University
 - Academic interests in computer science, natural language processing, and machine learning
 - Advises on data structures and algorithms, topics in programming olympiads, and natural language processing
@@ -61,12 +64,16 @@ Where it helps, they also point students to the domain-specific Wolfram Language
 - Published a [computational essay analyzing American political parties using natural language processing](https://community.wolfram.com/groups/-/m/t/3213886)
 - Represented Wolfram as a [Wolfram Student Ambassador](https://www.wolfram.com/) at a hackathon with over 800 participants
 
-{% include profile-card.html name="Sindhoora Raja" role="Subject Advisor in Biology and Chemistry" image="/assets/images/avatar-placeholder.svg" %}
+{% include profile-card.html name="Sindhoora Raja" role="Subject Advisor in Biology and Chemistry" image="/assets/images/sindhoora-raja.png" %}
+
+Sindhoora is an incoming freshman at Stanford University. Throughout high school, they have been actively involved in research in computational biology and neuroscience, and have worked with the Wolfram Chemistry Team on conformational analysis and protein surface area analysis. Their interests lie at the intersection of computation and human health. In their free time, they enjoy reading classics, exploring questions in the philosophy of science, and debating the ethics of emerging technologies.
 
 - Bioengineering major at Stanford University
+- Academic interests in computational biology, neuroscience, chemistry, robotics, and artificial intelligence
 - Advises on biology and chemistry
-- Alumnus of the [Wolfram High School Summer Research Program](https://education.wolfram.com/summer-research-high-school/) (2024)
-- Published a [computational essay analyzing polysaccharide bonding in *Cryptococcus neoformans*](https://community.wolfram.com/groups/-/m/t/3214184)
+- Has worked with the Wolfram Chemistry Team on conformational analysis and protein surface area analysis
+- Co-author of *Established and Novel Methods for Protein Analysis in Wolfram Language* (2024–25), implementing protein analysis techniques such as alpha complexes and Zernike moments and developing a novel Monte Carlo algorithm for estimating protein internal surface area
+- Author of [*Analyzing Polysaccharide Bonding in Cryptococcus neoformans*](https://community.wolfram.com/groups/-/m/t/3214184) (2024), using MMFF-based conformational analysis to investigate the preferred structures and energy landscapes of glucuronic acid, mannose, and xylose
 
 ## Mentorship Outcomes
 
