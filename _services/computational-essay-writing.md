@@ -39,7 +39,7 @@ And these are the mentor’s own [Wolfram Community Staff Picks](https://communi
 - Advises on data analysis and data mining
 - Published multiple [Wolfram Community Staff Pick](https://community.wolfram.com/web/ljunseo1007) computational essays, on topics including deep learning and data science
 - Mentor at the [Wolfram High School Summer Research Program](https://education.wolfram.com/summer-research-high-school/) (Boston, 2026); alumnus of the same program (2024)
-- Representing Wolfram as a [Wolfram Student Ambassador](https://www.wolfram.com/)
+- Representing Wolfram Technologies as a [Wolfram Student Ambassador](https://www.wolfram.com/) on and off campus
 - [Level 2 Certificate in Applied Expertise in Computational Research](https://www.wolframcloud.com/obj/online-courses/certificates/level2-computational-research/a03904fc-0c67-4c90-9854-ec20e89e349a/2.html) from Wolfram
 - Founded and leads the [Wolfram Computational Research Club](https://wolframclub.notion.site/homepage) at SUNY Korea, and has guided over [11 computational essays](https://wolframclub.notion.site/clubgallery#2e799f19acb880039501f8bb1c03aca2) from drafting to publication
 
@@ -72,8 +72,8 @@ Sindhoora is an incoming freshman at Stanford University. Throughout high school
 - Academic interests in computational biology, neuroscience, chemistry, robotics, and artificial intelligence
 - Advises on biology and chemistry
 - Has worked with the Wolfram Chemistry Team on conformational analysis and protein surface area analysis
-- Co-author of *Established and Novel Methods for Protein Analysis in Wolfram Language* (2024–25), implementing protein analysis techniques such as alpha complexes and Zernike moments and developing a novel Monte Carlo algorithm for estimating protein internal surface area
-- Author of [*Analyzing Polysaccharide Bonding in Cryptococcus neoformans*](https://community.wolfram.com/groups/-/m/t/3214184) (2024), using MMFF-based conformational analysis to investigate the preferred structures and energy landscapes of glucuronic acid, mannose, and xylose
+- Co-author of [Established and Novel Methods for Protein Analysis in Wolfram Language](https://community.wolfram.com/groups/-/m/t/3379964) (2024–25), implementing protein analysis techniques such as alpha complexes and Zernike moments and developing a novel Monte Carlo algorithm for estimating protein internal surface area
+- Author of [Analyzing Polysaccharide Bonding in Cryptococcus neoformans](https://community.wolfram.com/groups/-/m/t/3214184) (2024), using MMFF-based conformational analysis to investigate the preferred structures and energy landscapes of glucuronic acid, mannose, and xylose
 
 ## Mentorship Outcomes
 
