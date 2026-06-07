@@ -21,6 +21,8 @@ Working towards one real essay, the student develops three core competencies (co
 
 *Undergraduate students are welcome to join our faculty-advised [Computational Essay Workshops](https://wolframclub.notion.site/homepage) run through the Wolfram Computational Research Club at SUNY Korea.*
 
+{% include youtube.html id="E5-V-XLmroY" title="Computational Essay Writing Mentorship" %}
+
 ## What a Computational Essay Looks Like
 A computational essay is easiest to understand by reading one.
 

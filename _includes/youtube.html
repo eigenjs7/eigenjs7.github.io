@@ -1,0 +1,11 @@
+{%- comment -%}
+Responsive YouTube embed — 16:9 iframe that scales to the content width.
+
+Usage:
+  {% include youtube.html id="E5-V-XLmroY" title="Computational Essay Mentorship" %}
+
+Args:
+  id    — the YouTube video ID (required)
+  title — accessible title for the iframe (optional; defaults to "YouTube video")
+{%- endcomment -%}
+<div class="video-embed" markdown="0"><iframe src="https://www.youtube-nocookie.com/embed/{{ include.id }}" title="{{ include.title | default: 'YouTube video' | escape }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>

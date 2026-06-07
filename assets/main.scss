@@ -1264,6 +1264,25 @@ a.profile-card {
   }
 }
 
+// Responsive 16:9 video embed (see _includes/youtube.html)
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
 .service-cta {
   margin-top: 3rem;
   // Single-column grid sized to the widest button's max-content. With every
