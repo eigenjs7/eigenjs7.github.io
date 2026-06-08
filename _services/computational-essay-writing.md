@@ -45,7 +45,7 @@ The computational essays that the mentor has guided can be found [here](https://
 
 {% include profile-card.html name="Junseo Lee" role="Mentor · Subject Advisor in Data Analysis" href="/" image="/assets/images/profile.jpg" %}
 
-Junseo is a rising junior at Stony Brook University majoring in Applied Mathematics and Statistics. His interests sit where statistical theory meets applied questions in finance and machine learning, and he is currently researching multiple testing procedures for quantitative finance.
+Junseo is a rising junior at **Stony Brook University** majoring in **Applied Mathematics and Statistics**. His interests sit where statistical theory meets applied questions in finance and machine learning, and he is currently researching multiple testing procedures for quantitative finance.
 
 - Applied Mathematics and Statistics major at Stony Brook University
 - Academic interests in statistics, data science, and quantitative finance
@@ -68,7 +68,7 @@ Where it helps, they also point students to the domain-specific Wolfram Language
 
 {% include profile-card.html name="Eugene Hwang" role="Subject Advisor in Computer Science and Machine Learning" image="/assets/images/eugene-hwang.jpg" %}
 
-Eugene is a sophomore at Carnegie Mellon University studying Information Systems and Artificial Intelligence. He first started programming through competitive programming in middle school. Now he mostly focuses on full-stack development and natural language processing research, although he still does programming competitions on the side.
+Eugene is a sophomore at **Carnegie Mellon University** studying **Information Systems and Artificial Intelligence**. He first started programming through competitive programming in middle school. Now he mostly focuses on full-stack development and natural language processing research, although he still does programming competitions on the side.
 
 - Information Systems and Artificial Intelligence major at Carnegie Mellon University
 - Academic interests in computer science, natural language processing, and machine learning
@@ -79,7 +79,7 @@ Eugene is a sophomore at Carnegie Mellon University studying Information Systems
 
 {% include profile-card.html name="Sindhoora Raja" role="Subject Advisor in Biology and Chemistry" image="/assets/images/sindhoora-raja.png" %}
 
-Sindhoora is an incoming freshman at Stanford University. Throughout high school, they have been actively involved in research in computational biology and neuroscience, and have worked with the Wolfram Chemistry Team on conformational analysis and protein surface area analysis. Their interests lie at the intersection of computation and human health. In their free time, they enjoy reading classics, exploring questions in the philosophy of science, and debating the ethics of emerging technologies.
+Sindhoora is an incoming freshman at **Stanford University** majoring in **Bioengineering**. Throughout high school, they have been actively involved in research in computational biology and neuroscience, and have worked with the Wolfram Chemistry Team on conformational analysis and protein surface area analysis. Their interests lie at the intersection of computation and human health. In their free time, they enjoy reading classics, exploring questions in the philosophy of science, and debating the ethics of emerging technologies.
 
 - Bioengineering major at Stanford University
 - Academic interests in computational biology, neuroscience, chemistry, robotics, and artificial intelligence
