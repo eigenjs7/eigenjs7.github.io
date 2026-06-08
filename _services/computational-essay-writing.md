@@ -24,23 +24,32 @@ Working towards one real essay, the student develops three core competencies (co
 {% include youtube.html id="E5-V-XLmroY" title="Computational Essay Writing Mentorship" %}
 
 ## What a Computational Essay Looks Like
-A computational essay is easiest to understand by reading one.
 
-Excellent essays by high school students, from the Wolfram high school program, can be found here: [Computational Thinking Initiatives](https://www.computationinitiative.org/)
+While a general introduction can be found in [Stephen Wolfram's writing](https://writings.stephenwolfram.com/2017/11/what-is-a-computational-essay/), a computational essay is easiest to understand by reading one.
 
-And these are the mentor’s own [Wolfram Community Staff Picks](https://community.wolfram.com/web/ljunseo1007) on which the mentorship's guidance is modeled: 
-- [Loss landscape geometry across the double descent curve](https://community.wolfram.com/groups/-/m/t/3603794) 
-- [Impact of parameter perturbation on neural network performance](https://community.wolfram.com/groups/-/m/t/3217332)
+Excellent computational essays by high school students, from the Wolfram high school program, can be found on the [Computational Thinking Initiatives website](https://www.computationinitiative.org/).
 
-The computational essays that the mentor has guided can be found [here](https://wolframclub.notion.site/clubgallery).
+The following are essays written by the mentor and the subject advisors:
+
+- [Impact of parameter perturbation on the neural network performance](https://community.wolfram.com/groups/-/m/t/3217332) — Junseo Lee. *Wolfram Community*, Staff Picks, July 11, 2024.
+- [Loss landscape geometry across the double descent curve](https://community.wolfram.com/groups/-/m/t/3603794) — Junseo Lee. *Wolfram Community*, Staff Picks, January 10, 2026.
+- [Analyzing changes in the ideology of the Democratic and Republican party from 1900 to 2020](https://community.wolfram.com/groups/-/m/t/3213886) — Eugene Hwang. *Wolfram Community*, Staff Picks, July 11, 2024.
+- [Analyzing polysaccharide bonding in Cryptococcus neoformans](https://community.wolfram.com/groups/-/m/t/3214184) — Sindhoora Raja. *Wolfram Community*, Staff Picks, July 11, 2024.
+- [Established and novel methods for protein analysis in Wolfram Language](https://community.wolfram.com/groups/-/m/t/3379964) — Wolfram Education Programs. *Wolfram Community*, Staff Picks, February 4, 2025.
+
+The computational essays that the mentor has guided can be found [here](https://wolframclub.notion.site/clubgallery), and the following are selected essays:
+
+- [TSVD and autoencoder for image restoration: a comparative study](https://community.wolfram.com/groups/-/m/t/3726674) — Jaekyung Seol. *Wolfram Community*, Staff Picks, June 3, 2026.
 
 ## Mentor Profile
 
-{% include profile-card.html name="Junseo Lee" role="Mentor · Subject Advisor in Data Science" href="/" image="/assets/images/profile.jpg" %}
+{% include profile-card.html name="Junseo Lee" role="Mentor · Subject Advisor in Data Analysis" href="/" image="/assets/images/profile.jpg" %}
+
+Junseo is a rising junior at Stony Brook University majoring in Applied Mathematics and Statistics. His interests sit where statistical theory meets applied questions in finance and machine learning, and he is currently researching multiple testing procedures for quantitative finance.
 
 - Applied Mathematics and Statistics major at Stony Brook University
 - Academic interests in statistics, data science, and quantitative finance
-- Advises on data analysis and data mining
+- Advises on data analysis and statistical methods
 - Published multiple [Wolfram Community Staff Pick](https://community.wolfram.com/web/ljunseo1007) computational essays, on topics including deep learning and data science
 - Mentor at the [Wolfram High School Summer Research Program](https://education.wolfram.com/summer-research-high-school/) (Boston, 2026); alumnus of the same program (2024)
 - Representing Wolfram Technologies as a [Wolfram Student Ambassador](https://www.wolfram.com/) on and off campus
