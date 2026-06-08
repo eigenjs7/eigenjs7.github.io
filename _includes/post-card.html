@@ -1,0 +1,17 @@
+<div markdown="0"><a href="{{ include.url | relative_url }}" class="card card--outlined">
+  <div class="card-body">
+    <h2 class="card-title">{{ include.title | escape }}</h2>
+    {%- if include.metadata -%}
+      <div class="card-metadata">
+        {%- assign meta_items = include.metadata | split: " · " -%}
+        {%- for item in meta_items -%}
+          <span class="tag">{{ item }}</span>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+    {%- if include.summary -%}
+      <p class="card-summary">{{ include.summary }}</p>
+    {%- endif -%}
+  </div>
+  <span class="card-arrow" aria-hidden="true">→</span>
+</a></div>

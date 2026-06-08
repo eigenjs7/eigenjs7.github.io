@@ -1018,6 +1018,13 @@ blockquote {
   }
 }
 
+// Standalone card with a visible border (matches profile-card style).
+.card--outlined {
+  border: 1px solid $grey-color-light;
+  border-radius: 4px;
+  grid-template-columns: 1fr auto;
+}
+
 // Project cards drop the glyph column entirely — text only, no left gutter.
 .projects-grid .card {
   grid-template-columns: 1fr auto;
