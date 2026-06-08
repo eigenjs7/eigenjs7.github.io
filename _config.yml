@@ -15,6 +15,7 @@ twitter:
   card: summary
 
 # Build
+timezone: Asia/Seoul
 theme: minima
 permalink: /:year/:month/:day/:title/
 plugins:
