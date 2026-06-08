@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "We Code to Understand"
-date: 2026-06-08 00:00:00 +0900
+date: 2026-06-04 00:00:00 +0900
 categories: [Education]
 tags: [Computational Thinking, Computational Essay, Wolfram Language, STEM]
 description: "How shifting from mathematical to computational thinking — and from consuming to producing knowledge — is reshaping STEM education."
