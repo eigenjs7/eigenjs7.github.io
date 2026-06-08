@@ -17,7 +17,7 @@ The Computational Essay Writing Mentorship is a one-on-one mentorship program th
 
 It is not a coding course. The computational essay is the medium: an intellectual story told through the collaboration of a human author and a computer, built from text, code, and computation in a single document. The topic is the student's own, motivated by a question they already care about, and can come from a broad range of fields, including data analysis, mathematics, and the natural sciences.
 
-Working towards one real essay, the student develops three core competencies (computational thinking, technical communication, and fluency in the Wolfram Language) and comes away with a tangible portfolio piece. The mentor, who has guided over 17 essays from drafting to publication, provides guidance and feedback, technical support, and instructional scaffolding at every stage; the student does the thinking, the coding, and the writing.
+Working towards one real essay, the student develops three core competencies (computational thinking, technical communication, and fluency in the Wolfram Language) and comes away with a tangible portfolio piece. The mentor, who has guided over 11 essays from drafting to publication, provides guidance and feedback, technical support, and instructional scaffolding at every stage; the student does the thinking, the coding, and the writing.
 
 *Undergraduate students are welcome to join our faculty-advised [Computational Essay Workshops](https://wolframclub.notion.site/homepage) run through the Wolfram Computational Research Club at SUNY Korea.*
 
@@ -68,7 +68,7 @@ Where it helps, they also point students to the domain-specific Wolfram Language
 
 {% include profile-card.html name="Eugene Hwang" role="Subject Advisor in Computer Science and Machine Learning" image="/assets/images/eugene-hwang.jpg" %}
 
-Eugene is a sophomore at **Carnegie Mellon University** studying **Information Systems and Artificial Intelligence**. He first started programming through competitive programming in middle school. Now he mostly focuses on full-stack development and natural language processing research, although he still does programming competitions on the side.
+Eugene is a rising junior at **Carnegie Mellon University** studying **Information Systems and Artificial Intelligence**. He first started programming through competitive programming in middle school. Now he mostly focuses on full-stack development and natural language processing research, although he still does programming competitions on the side.
 
 - Information Systems and Artificial Intelligence major at Carnegie Mellon University
 - Academic interests in computer science, natural language processing, and machine learning
