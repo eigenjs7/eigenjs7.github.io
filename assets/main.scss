@@ -1198,6 +1198,18 @@ blockquote {
     background-color: $grey-color-light;
     color: $grey-color-dark;
   }
+
+  // Recognition badge — sienna fill like the .category pills on posts and
+  // the archive, so distinctions read one tier above the khaki tags.
+  .badge {
+    font-family: $base-font-family;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    padding: 0.25em 0.6em;
+    border-radius: 3px;
+    background-color: $title-color;
+    color: $background-color;
+  }
 }
 
 .card-summary {

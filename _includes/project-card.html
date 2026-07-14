@@ -3,12 +3,17 @@
 <a href="{{ href }}" class="card" target="_blank" rel="noopener">
   <div class="card-body">
     <h2 class="card-title">{{ p.title | escape }}</h2>
-    {%- if p.metadata -%}
+    {%- if p.badge or p.metadata -%}
       <div class="card-metadata">
-        {%- assign meta_items = p.metadata | split: " · " -%}
-        {%- for item in meta_items -%}
-          <span class="tag">{{ item }}</span>
-        {%- endfor -%}
+        {%- if p.badge -%}
+          <span class="badge">{{ p.badge }}</span>
+        {%- endif -%}
+        {%- if p.metadata -%}
+          {%- assign meta_items = p.metadata | split: " · " -%}
+          {%- for item in meta_items -%}
+            <span class="tag">{{ item }}</span>
+          {%- endfor -%}
+        {%- endif -%}
       </div>
     {%- endif -%}
     {%- if p.summary -%}
