@@ -1033,12 +1033,11 @@ blockquote {
 // =============================================================================
 // Section heading on listing pages — promotes the page's primary structural
 // divisions (e.g. Tutoring / Consulting on Services, Programs on Projects) to
-// h1. Garamond italic sienna with a hairline below; echoes the wordmark cut
+// h1. Garamond sienna with a hairline below; echoes the wordmark cut
 // and keeps these visually distinct from the bold Source Serif used for
 // taxonomy headings (.category-heading, .year-heading).
 .page .page-content > h1 {
   font-family: $title-font;     // Adobe Garamond Pro
-  font-style: italic;
   font-weight: 400;
   font-size: 1.85rem;
   letter-spacing: -0.01em;
