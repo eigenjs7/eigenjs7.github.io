@@ -10,7 +10,7 @@
 
 A serif-led, warm-neutral personal research site. Visual posture is academic restraint: a single accent (sienna), no UI chrome, type does the work of hierarchy. Display surfaces use Adobe Garamond Pro (Adobe Fonts), the classic Slimbach cut of Claude Garamont's roman; body and section headings use Source Serif 4 at its text optical-size cut.
 
-- **Site title:** *Junseo Lee's Research Blog* (Adobe Garamond Pro display).
+- **Site title:** *Junseo Lee* (Adobe Garamond Pro display).
 - **Tagline:** *Exploring mathematics and computation* (Source Sans 3).
 - **Author / domain:** Junseo Lee, eigenjs.com.
 

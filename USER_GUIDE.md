@@ -105,7 +105,7 @@ Put the file in `_drafts/` (no date prefix needed) instead of `_posts/`. It only
 Everything lives in `_config.yml`:
 
 ```yaml
-title: Junseo Lee's Research Blog              # header title
+title: Junseo Lee                              # header title
 description: "Exploring mathematics and computation"   # tagline (also used for SEO + share cards)
 email: junseo.lee.1@stonybrook.edu
 github_username: eigenjs7
