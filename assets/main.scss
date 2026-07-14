@@ -721,7 +721,6 @@ blockquote {
 .home-intro {
   max-width: 600px;
   margin: 0 auto 3rem;
-  text-align: center;
 
   .profile-photo {
     display: block;
@@ -729,14 +728,14 @@ blockquote {
     height: 110px;
     object-fit: cover;
     border-radius: 50%;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
   }
 
   p {
     font-size: 1.05rem;       // was 0.9rem — this is the hero paragraph
     line-height: 1.7;
     color: $text-color;       // was $grey-color — primary copy deserves primary color
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   a {
