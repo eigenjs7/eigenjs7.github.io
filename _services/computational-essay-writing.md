@@ -43,6 +43,9 @@ The following are essays written by the mentor and the subject advisors:
 
 The computational essays that the mentor has guided can be found [here](https://wolframclub.notion.site/clubgallery), and the following are selected essays:
 
+- [Evaluating the relationship between export diversification and economic development](https://community.wolfram.com/groups/-/m/t/3752366) — Jacob Chung. *Wolfram Community*, Staff Picks, July 9, 2026.
+- [Characterizing the hypothesis and weight spaces of grid neural networks](https://community.wolfram.com/groups/-/m/t/3751710) — Jason Eun-Shik Tae. *Wolfram Community*, Staff Picks, July 9, 2026.
+- [Range of motion during disk desiccation and spinal arthrodesis using Lagrangian mechanics](https://community.wolfram.com/groups/-/m/t/3752279) — Ahaan Gupta. *Wolfram Community*, Staff Picks, July 9, 2026.
 - [TSVD and autoencoder for image restoration: a comparative study](https://community.wolfram.com/groups/-/m/t/3726674) — Jaekyung Seol. *Wolfram Community*, Staff Picks, June 3, 2026.
 
 ## Mentor Profile
