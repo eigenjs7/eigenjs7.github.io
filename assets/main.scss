@@ -749,6 +749,103 @@ blockquote {
 }
 
 // =============================================================================
+// ABOUT PAGE — CV sections
+// Same column rhythm as the archive list (date hint on the left, content on
+// the right) and the same section-anchor heading treatment as .year-heading.
+// =============================================================================
+.about-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cv-section {
+  margin-bottom: 3rem;
+
+  h2 {
+    font-family: $heading-font;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $title-color;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $grey-color-light;
+  }
+
+  .cv-entries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 0.25rem 1.25rem;
+      padding: 0.65rem 0;
+      align-items: baseline;
+    }
+  }
+
+  .cv-dates {
+    font-size: 0.8rem;
+    color: $grey-color;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .cv-role {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $text-color;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .cv-note {
+    font-size: 0.92rem;
+    color: $grey-color;
+    margin: 0.15rem 0 0;
+    line-height: 1.6;
+  }
+
+  .cv-skills {
+    list-style: disc;
+    margin: 0 0 0 1.25rem;
+    padding: 0;
+
+    li {
+      font-size: 0.95rem;
+      color: $text-color;
+      line-height: 1.7;
+      margin-bottom: 0.35rem;
+
+      &::marker {
+        color: $grey-color;
+      }
+    }
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: underline;
+    text-decoration-color: $grey-color;
+
+    &:hover {
+      text-decoration-color: $text-color;
+    }
+  }
+}
+
+// Stack the date above the entry on narrow screens — 130px + content
+// doesn't fit side by side on a palm viewport.
+@media screen and (max-width: $on-palm) {
+  .cv-section .cv-entries li {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+    padding: 0.75rem 0;
+  }
+}
+
+// =============================================================================
 // POSTS PAGE - Archive by year
 // =============================================================================
 .posts-page,
